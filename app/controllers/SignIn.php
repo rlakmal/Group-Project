@@ -6,32 +6,84 @@ class SignIn extends Controller
     {
         $user = new User;
 
-        // echo "this is a about controller";
-        
+        // sign in validation
         if (isset($_POST['signIn'])) {
-            show($_POST);
-            redirect('employer/home');
+            // show($_POST);
 
+            if ($this->signinVerify($user)) {
+            }
+            // redirect('employer/home');
         }
 
-
+        // sign up validation
         if (isset($_POST['signUp'])) {
 
             if ($user->validate($_POST)) {
 
-                // show($_POST);
-
                 unset($_POST['re-password']);
                 unset($_POST['signUp']);
 
+                $_POST['status'] = 'employer';
+
                 $user->insert($_POST);
-                header("Location:" .ROOT.'/home');
+                redirect('home/signin');
             }
         }
-        
-        
+
         $data['errors'] = $user->errors;
 
+        // show($data);
         $this->view('signin', $data);
+    }
+
+    public function signinVerify($user)
+    {
+        // show($_POST);
+        if ($user->formData($_POST)) {
+
+            $arr['email'] = $_POST['email'];
+            $row = $user->first($arr);
+
+            // $emprow = $employee->first($arr);
+
+            if ($row) {
+
+                $checkpassword = password_verify($_POST['password'], $row->password);
+
+                if ($checkpassword == true) {
+
+                    unset($row->password);
+
+                    $_SESSION['USER'] = $row;
+
+                    // show($row);
+
+                    // check session user
+                    $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
+                    //    echo $username;
+
+                    if ($row->status == 'employer') {
+                        redirect('employer/home');
+                    } else if ($row->status == 'worker') {
+                        redirect('worker/home');
+                    } else if ($row->status == 'admin') {
+                        redirect('admin/home');
+                    } else if ($row->status == 'crew_member') {
+                        redirect('employer/home');
+                    }
+
+                } else {
+                    $data['errors'] = "";
+                    $user->errors = "Worng Email or Password";
+                    $data['errors'] = $user->errors;
+                }
+            }
+
+        } else {
+            $data['errors'] = "";
+            $user->errors = "Worng Email or Password";
+            $data['errors'] = $user->errors;
+            // echo "Invalid Sign-In";
+        }
     }
 }

@@ -4,7 +4,12 @@ class AdHome extends Controller
 {
     public function index($a = '', $b = '', $c = '')
     {
-        // echo "this is a about controller";
-        $this->view('admin/home');
+        $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
+        
+        if ($username != 'User') {
+            $this->view('admin/home');
+        }else{
+            redirect('home');
+        }
     }
 }
