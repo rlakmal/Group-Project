@@ -41,7 +41,7 @@
                         <?php if (isset($data)) {
                             show($data);
                         } else {
-                            echo "svgfvfs";
+                            // echo "svgfvfs";
                         } ?>
                         <div></div>
                         <div class="actual-form">
