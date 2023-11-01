@@ -1,18 +1,20 @@
 <?php
-
-route('delivery/orders', 'delivery/Orders@index');
+/*---------------------------------------------------------------------
+    home routes
+--------------------------------------------------------------------- */
 route('home','Home@index');
-route('customer/customer-orders', 'customer/customerOverview@index');
-route('customer/orders', 'customer/customerOrders');
-route('manager/overview','manager/Overview@index');
-route('manager/profile','manager/Profile@index');
-route('manager/signin','manager/SignIn@index');
+
 route('home/signin','SignIn@index');
 route('home/workerreg','worker/WorkerReg@index');
 route('home/workerregnext','worker/WorkerRegNext@index');
 route('home/workerregthree','worker/WorkerRegThree@index');
 route('home/workerregfour','worker/WorkerRegFour@Index');
 route('home/workerregfive','worker/WorkerRegFive@Index');
+
+/*---------------------------------------------------------------------
+    employee routes
+--------------------------------------------------------------------- */
+
 route('employer/home','employer/Emphome@index');
 route('employer/addjob','employer/AddJob@index');
 route('employer/message','employer/Message@index');
@@ -22,6 +24,12 @@ route('employer/myjob','employer/Myjob@index');
 route('employer/postedjobsrequest','employer/PostedjobsRequest@index');
 route('employer/myworkerreq','employer/RequestByME@index');
 route('employer/profile','employer/EmployerProfile@index');
+
+
+/*---------------------------------------------------------------------
+    worker routes
+--------------------------------------------------------------------- */
+
 route('worker/home','worker/WorkerHome@index');
 route('worker/requestjob','worker/RequestJob@index');
 route('worker/services','worker/WorkersList@index');
@@ -32,5 +40,10 @@ route('worker/recievedjobs','worker/RecievedJob@index');
 route('worker/acceptedjobs','worker/AcceptedJobs@index');
 route('worker/completedjobs','worker/CompletedJobs@index');
 route('worker/workerprofile','worker/WorkerProfile@index');
+
+/*---------------------------------------------------------------------
+    admin routes
+--------------------------------------------------------------------- */
+
 route('admin/home','admin/AdHome@index');
 route('admin/workers','admin/WorkersList@index');

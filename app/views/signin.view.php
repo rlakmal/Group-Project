@@ -7,16 +7,22 @@
     <title>Signin</title>
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/signinup.css">
 </head>
-<?php include 'home/homenavbar.php'?>
+<?php include 'home/homenavbar.php' ?>
 
 <body>
     <main class="">
         <div class="box">
             <div class="inner-box">
                 <div class="form-warp">
+
+                    <!-- --------------------------
+                       Sign-IN Part
+                    ------------------------------- -->
                     <form method="POST" autocomplete="off" class="sign-in-form">
                         <div class="logo">
-                            Errand
+                            <h3>
+                                Errand
+                            </h3>
                             <!-- <h4>Amoral</h4> -->
                             <span>
                                 <a href="<?= ROOT ?>/home">
@@ -32,21 +38,27 @@
                             <h6>Not Registred Yet ?</h6>
                             <a href="#" class="toggle">Sign Up</a>
                         </div>
+                        <?php if (isset($data)) {
+                            show($data);
+                        } else {
+                            echo "svgfvfs";
+                        } ?>
+                        <div></div>
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="email" name="email" class="input-field" required autocomplete="off" minlength="5">
+                                <input type="text" name="email" class="input-field"  autocomplete="on" minlength="5">
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-wrap">
-                                <input type="password" name="password" class="input-field" required autocomplete="off">
+                                <input type="password" name="password" class="input-field"  autocomplete="on">
                                 <label for="pass">Password</label>
                                 <a href="#" class="hide active">
                                     <ion-icon name="eye-outline"></ion-icon>
                                 </a>
-                                
- 
+
+
                             </div>
-                            <input type="submit" value="Sign In" class="sign-btn">
+                            <input type="submit" value="Sign In" class="sign-btn" name="signIn">
                             <p class="text">
                                 Forget your password or your login details?
                                 <a href="#" class="toggle-1">Get Help</a> Signing in
@@ -54,10 +66,17 @@
 
                         </div>
                     </form>
+
+                    <!-- --------------------------
+                        Sign-Up Part
+                    ------------------------------- -->
                     <form method="POST" autocomplete="off" class="sign-up-form">
                         <div class="logo">
-                            <img src="<?= ROOT ?>/assets/images/logo.JPG" alt="company_logo">
+                            <!-- <img src="<?= ROOT ?>/assets/images/logo.JPG" alt="company_logo"> -->
                             <!-- <h4>Amoral</h4> -->
+                            <h3>
+                                Errand
+                            </h3>
                             <span>
                                 <a href="#">
                                     <ion-icon name="chevron-back-outline"></ion-icon>
@@ -74,20 +93,20 @@
                         </div>
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="text" name = "fullname"  class="input-field" required autocomplete="off">
+                                <input type="text" name="name" class="input-field" required autocomplete="off">
                                 <label for="fullname">Full Name</label>
                             </div>
                             <div class="input-wrap">
-                                <input type="email" name = "email" class="input-field" required autocomplete="on">
+                                <input type="email" name="email" class="input-field" required autocomplete="on">
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-wrap">
-                                <input type="password" name = "password" class="input-field" required autocomplete="off">
+                                <input type="password" name="password" class="input-field" required autocomplete="off">
                                 <label for="pass">Password</label>
 
                             </div>
                             <div class="input-wrap">
-                                <input type="password" name = "re-password" class="input-field" required autocomplete="off">
+                                <input type="password" name="re-password" class="input-field" required autocomplete="off">
                                 <label for="pass">Confirm Password</label>
                                 <a href="#" class="hide active">
                                     <ion-icon name="eye-outline"></ion-icon>

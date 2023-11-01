@@ -5,13 +5,13 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     // database configaration 
 
     // define('DBHOST', 'localhost');
-    define('DBHOST', 'localhost');
-    define('DBNAME', 'errand_db');
+    define('DBHOST', 'localhost:3308');
+    define('DBNAME', 'errand');
     define('DBUSER', 'root');
     define('DBPASS', '');
     define('DBDRIVER', '');
 
-    define('ROOT', 'http://localhost/ErrandNew/public');
+    define('ROOT', 'http://localhost/Group-project/public');
 
 } else {
 
