@@ -9,10 +9,7 @@ class SignIn extends Controller
         // sign in validation
         if (isset($_POST['signIn'])) {
             // show($_POST);
-
-            if ($this->signinVerify($user)) {
-            }
-            // redirect('employer/home');
+            $this->signinVerify($user);
         }
 
         // sign up validation

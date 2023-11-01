@@ -11,10 +11,10 @@ Trait Model
     protected $offset       = 0;
     protected $order_type   = 'DESC';
     public $errors       = 'id';
-    public function findAll()
+    public function findAll($id = 'id')
     {
 
-        $quary = "SELECT * FROM $this->table ORDER BY $this->order_column $this->order_type LIMIT $this->limit OFFSET $this->offset";
+        $quary = "SELECT * FROM $this->table ORDER BY $id $this->order_type LIMIT $this->limit OFFSET $this->offset";
 
         // echo $quary;
         // run the quary stage
@@ -95,7 +95,7 @@ Trait Model
     }
 
 
-   public function where($data, $data_not = [])
+   public function where($data,$id = 'id' ,$data_not = [])
     {
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
@@ -109,7 +109,7 @@ Trait Model
         }
 
         $quary = trim($quary, " && ");
-        $quary .= " ORDER BY $this->order_column $this->order_type LIMIT $this->limit OFFSET $this->offset";
+        $quary .= " ORDER BY $id $this->order_type LIMIT $this->limit OFFSET $this->offset";
 
         // echo $quary;
 
