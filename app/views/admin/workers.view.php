@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sidebar</title>
+    <!-- Link Styles -->
+    <link rel="stylesheet" href="<?= ROOT ?>/assets/css/style-bar.css">
+    <link rel="stylesheet" href="<?= ROOT ?>/assets/css/admin/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <?php include 'sidebar.php' ?>
+    <!-- Navigation bar -->
+
+    <?php include 'navigationbar.php' ?>
+    <!-- Scripts -->
+    <script src="<?= ROOT ?>/assets/js/script-bar.js"></script>
+
+    <!-- content  -->
+    <section id="main" class="main">
+
+        <h2>Regitered Workers</h2>
+
+        <form>
+            <div class="form">
+                <input class="form-group" type="text" placeholder="Search...">
+                <i class='bx bx-search icon'></i>
+            </div>
+            <div class="form">
+                <input class="form-group" type="text" placeholder="Filter...">
+                <i class='bx bx-search icon'></i>
+            </div>
+
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="ordId">Worker Name</th>
+                    <th class="desc">Category</th>
+                    <th class="stth">Worker ID</th>
+                    <th class="cost">Contact</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+
+        </table>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="<?= ROOT ?>/assets/js/customer/customer-orders.js"></script>
+</body>
+
+</html>
