@@ -21,6 +21,7 @@ class Myjob extends Controller
             $data['data'] = $result;
 
             // job delete
+            // show();
             if (isset($_POST['jobDelete'])) {
                 $jobId = $_POST['id'];
                 // echo $jobId;
