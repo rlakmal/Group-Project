@@ -79,6 +79,7 @@ class User
 	{
 		$this->errors = [];
 
+		// show($data);
 		// is empty email 
 		if (empty($data['email'])) {
 
@@ -87,10 +88,10 @@ class User
 		}
 
 		// email validation
-		// if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
-		// 	$errors['flag'] = true;
-		// 	$errors['email'] = "Email is not Valid";
-		// }
+		if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+			$errors['flag'] = true;
+			$errors['email'] = "Email is not Valid";
+		}
 
 		// is empty password 
 		if (empty($data['password'])) {
@@ -99,10 +100,11 @@ class User
 		}
 
 		if (empty($errors)) {
-
-
 			return true;
 		} else {
+			$errors['password1']=$data['password'];
+			$errors['email1']=$data['email'];
+			
 			return false;
 		}
 	}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/jobPost.css">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/jobpopup.css">
 
+
     <title>Document</title>
 </head>
 
@@ -32,7 +33,6 @@
                 $hours_difference = $interval->h;
                 $minutes_difference = $interval->i;
                 $seconds_difference = $interval->s;
-
 
                 if ($days_difference > 0) {
                     $times_ago = $days_difference . " days ago";
@@ -67,7 +67,8 @@
         <?php
             }
         }
-        ?>
+    }
+    ?>
     </div>
     <div class="popup-view">
         <form method="POST">
@@ -90,6 +91,7 @@
     </div>
     <div id="overlay1" class="overlay"></div>
     <script src="<?= ROOT ?>/assets/js/employer/editpost.js"></script>
+
 
 </body>
 
