@@ -23,31 +23,6 @@
         <h2>Registered Workers</h2>
         <form>
             <div class="form">
-                <!-- Category Selector -->
-                <select class="form-group" name="category">
-                    <option value="all">All Categories</option>
-                    <option value="category1">Technicians </option>
-                    <option value="category2">AC Repairs</option>
-                    <option value="CCTV">CCTV</option>
-                    <option value="Constructions">Constructions</option>
-                    <option value="Electricians">Electricians</option>
-                    <option value="Electronic Repairs">Electronic Repairs</option>
-                    <option value="Glass & Aluminium">Glass & Aluminium</option>
-                    <option value="Iron Works">Iron Works</option>
-                    <option value="Masonry">Masonry</option>
-                    <option value="Odd Jobs">Odd Jobs</option>
-                    <option value="Pest Controllers">Pest Controllers</option>
-                    <option value="Plumbing">Plumbing</option>
-                    <option value="Wood Works">Wood Works</option>
-                    <!-- Add more categories as needed -->
-                </select>
-                <!-- Location Selector -->
-                <select class="form-group" name="location">
-                    <option value="all">All Locations</option>
-                    <option value="location1">Location 1</option>
-                    <option value="location2">Location 2</option>
-                    <!-- Add more locations as needed -->
-                </select>
                 <input class="form-group" type="text" placeholder="Search...">
                 <i class='bx bx-search icon'></i>
             </div>
@@ -56,9 +31,8 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th class="ordId">Worker Name</th>
-                    <th class="desc">Category</th>
-                    <th class="stth">Worker ID</th>
+                    <th class="ordId">Employer Name</th>
+                    <th class="stth">Employer ID</th>
                     <th class="cost">Contact</th>
                     <th></th>
                 </tr>
@@ -67,7 +41,6 @@
                 <tr>
                     <td>1</td>
                     <td>John Doe</td>
-                    <td>Category 1</td>
                     <td>12345</td>
                     <td>johndoe@example.com</td>
                     <td class="edit-view-profile"><a href="#">
@@ -78,7 +51,6 @@
                 <tr>
                     <td>2</td>
                     <td>Jane Smith</td>
-                    <td>Category 2</td>
                     <td>67890</td>
                     <td>janesmith@example.com</td>
                     <td class="edit-view-profile"><a href="#">

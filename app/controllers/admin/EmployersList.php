@@ -1,6 +1,6 @@
 <?php
 
-class WorkersList extends Controller
+class EmployersList extends Controller
 {
     public function index($a = '', $b = '', $c = '')
     {
@@ -8,7 +8,7 @@ class WorkersList extends Controller
 
         if ($username != 'User' && $_SESSION['USER']->status == 'admin') {
 
-            $this->view('admin/workers');
+            $this->view('admin/employers');
         } else {
             redirect('home');
         }

@@ -35,12 +35,14 @@
   padding: 10px 10px;
   text-align: center;
   background: #f4f7fc;
+  padding-bottom: 20px;
 }
 
 #main form {
   background: #f4f7fc;
   top: 64px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
+  padding-left: 20%;
 }
 
 .form-group {
@@ -208,7 +210,7 @@ table tbody tr.active-row {
   transform: translate(-50%, -50%) scale(0);
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+  box-shadow: 0 0 0 1px rgb(246, 120, 65), 0 0 0 2px rgb(239, 111, 64);
   visibility: hidden;
   transition: transform 0.5s, top 0.5s;
   justify-content: center;
@@ -240,6 +242,7 @@ table tbody tr.active-row {
 
 .popup-report input,
 .popup-new input,
+.popup-view input,
 textarea {
   position: relative;
   left: 9%;
@@ -266,6 +269,7 @@ textarea {
 }
 
 .popup-report .close-btn,
+.popup-view .close-btn,
 .cancelR-btn {
   position: relative;
   /* right: 1%; */
@@ -282,7 +286,7 @@ textarea {
 
 .popup-report .cancelR-btn {
   /* right: 23%; */
-  background: var(--blue);
+  background: #fc3b56;
 }
 
 .overlay {
@@ -304,7 +308,10 @@ textarea {
 
 .popup-view h2 {
   text-align: center;
-  padding-top: 4%;
+  padding-top: 2%;
+  padding-bottom: 4%;
+  margin: 4px;
+  font-weight: bold;
   /* margin: 20px; */
 }
 
@@ -590,3 +597,31 @@ select {
     
   }
 } */
+.edit-icon i {
+  font-size: 30px;
+}
+.edit-view-profile i {
+  font-size: 30px;
+}
+.popup-view h4 {
+  margin-left: 9%;
+}
+.popup-view .btns {
+  margin-left: 75%;
+}
+.is_active p {
+  background-color: #81d43a;
+  border-radius: 40px;
+  max-width: 60px;
+  padding: 1px;
+  color: #ffffff;
+  text-align: center;
+}
+.is_deactive p {
+  background-color: #fc3b56;
+  border-radius: 40px;
+  max-width: 60px;
+  padding: 1px;
+  color: #ffffff;
+  text-align: center;
+}
