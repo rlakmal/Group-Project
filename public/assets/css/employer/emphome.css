@@ -1,3 +1,7 @@
+* {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
 .homenavbar {
   width: 100%;
   position: fixed;

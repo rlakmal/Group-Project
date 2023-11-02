@@ -26,13 +26,19 @@
                 </ul>
             </nav>
             <div class="icons">
-                <a href="<?= ROOT ?>/employer/message"><img src="<?= ROOT ?>/assets/images/employer/msg.png" alt="Message"></a>
+                <a href="<?= ROOT ?>/employer/message">
+                     <i class="bx bxs-chat icon"></i>
+                </a>
+                <!-- <a href="<?= ROOT ?>/employer/message"><img src="<?= ROOT ?>/assets/images/employer/msg.png" alt="Message"></a> -->
                 <a href="#">
                     <i class="bx bxs-bell icon"></i>
                     <!-- <img src="<?= ROOT ?>/assets/images/employer/belll.png" alt="notification"> -->
                 </a>
                 <div class="profile-dropdown" id="profile-dropdown">
-                    <a href="#"><img class="profile-icon" src="<?= ROOT ?>/assets/images/employer/prr.png" alt="Profile"></a>
+                    <a href="#">
+                        <i class="bx bxs-user icon"></i>
+                        <!-- <img class="profile-icon" src="<?= ROOT ?>/assets/images/employer/prr.png" alt="Profile"> -->
+                    </a>
                     <div class="profile-menu" id="profile-menu">
                         <a href="<?= ROOT ?>/employer/home">Home</a>
                         <a href="<?= ROOT ?>/employer/myjob">My Jobs</a>

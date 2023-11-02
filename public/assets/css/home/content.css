@@ -85,10 +85,16 @@
   font-size: 90px;
 }
 .home-first-content .first_letter {
-  font-size: 90px;
-  color: #ee8452;
+  font-size: 153px;
+  color:#f16a2d;
   font-weight: bold;
 }
+
+/* .logo-name{
+  background-color: #000000;
+  width: 100px;
+  height: 100px;
+} */
 
 @media screen and (max-width: 500px) {
   .home-first-content .title {
@@ -102,21 +108,81 @@
 .home-first-content span {
   font-size: 60px;
   font-weight: 300;
-  background-color: rgba(255, 255, 255, 0.3);
+  /* background: linear-gradient(90deg, #ffffff, #ffffff00); */
+  font-weight: bolder;
 }
 
-.home-first-content button {
+.home-first-content .button-reg {
+  background-color: #ffffff;
+  color: #000000;
   font-size: 20px;
   width: 300px;
   height: 70px;
   font-weight: 200;
 }
 
-.home-first-content button:hover {
+.home-buttons{
+  width: 462px;
+  height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #000000; */
+
+}
+
+.home-first-content .button-hire {
+  margin-left: 17px;
+  background-color: #f16a2d;
+  color: #fff;
   font-size: 20px;
   width: 300px;
   height: 70px;
-  font-weight: bold;
+  font-weight: 200;
+}
+
+.button-reg {
+  background-color: white;
+  color: black; /* Assuming black text on white background */
+  transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth color change */
+}
+
+.button-hire {
+  background-color: #f16a2d;
+  color: #fff; /* Assuming white text on orange background */
+  transition: background-color 0.3s, color 0.3s; /* Adding transition for smooth color change */
+}
+
+.home-buttons:hover .button-reg {
+  background-color: #f16a2d;
+  color: #fff; /* Change text to white when home-buttons is hovered */
+}
+
+.home-buttons:hover .button-hire {
+  background-color: #fff;
+  color: black; /* Change text to black when home-buttons is hovered */
+}
+
+.home-first-content .button-hire:hover {
+  background-color: #ffffff;
+  color:#2a3441;
+  text-decoration: underline;
+  transform: scale(1.05);
+  box-shadow: 0 3px 9px 2px rgba(64, 60, 67, 0.793);
+}
+
+
+.home-first-content .button-reg:hover {
+  background-color:#f16a2d;
+  color: #fff;
+  text-decoration: underline;
+  transform: scale(1.05);
+  box-shadow: 0 3px 9px 2px rgba(64, 60, 67, 0.793);
+}
+
+
+.home-first-content .button-hire:hover + .home-first-content .button-reg{
+  background-color: #f16a2d;
+  color: #fff;
 }
 
 span {
@@ -140,9 +206,44 @@ span.subtitle {
 }
 
 .two-content-div-form {
-  border: 1px solid black;
+  border: 1px solid #f16a2d;
   padding: 2% 2%;
-  width: 50%;
+  width: 30%;
+  background-color: #f16a2d;
+  box-shadow: 0 3px 9px 2px rgba(64,60,67,.24);
+  border-radius: 25px;
+  color: #fff;
+}
+
+.info{
+  border-color: #fff;
+  border-radius: 2px;
+  padding: 16px;
+  height: 40px;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.contact-button{
+  background-color: #2a3441;
+  color: #fff;
+  border-radius: 25px;
+  
+  height: 27px;
+  width: 60px;
+  cursor: pointer;
+}
+/* 
+.contact-button :hover{
+background-color: #ee8452;
+} */
+
+.contact-button :hover{
+  text-decoration: underline;
+  box-shadow: 0 3px 9px 2px rgba(64,60,67,.24);
+  background-color: #fff;
+  transform: scale(1.2);
+  color: #2a3441;
 }
 
 .single-content-div-form {
@@ -158,7 +259,7 @@ form {
   line-height: 50px;
 }
 
-.button {
+button {
   background-color: #f4af92;
   color: #000000;
   border: 0px;
