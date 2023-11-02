@@ -5,19 +5,18 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     // database configaration 
 
     // define('DBHOST', 'localhost');
-    define('DBHOST', 'localhost:3308');
+    define('DBHOST', 'localhost');
     define('DBNAME', 'errand');
     define('DBUSER', 'root');
     define('DBPASS', '');
     define('DBDRIVER', '');
 
     define('ROOT', 'http://localhost/Group-project/public');
-
 } else {
 
     // database configaration
-    define('DBNAME', 'amoral_db');
-    define('DBHOST', 'localhost:3308');
+    define('DBNAME', '');
+    define('DBHOST', 'localhost');
     define('DBUSER', 'root');
     define('DBPASS', '');
     define('DBDRIVER', '');

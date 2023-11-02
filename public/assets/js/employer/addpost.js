@@ -19,3 +19,6 @@ function closeReport() {
   popupReport.classList.remove("open-popup-report");
   overlay.classList.remove("overlay-active");
 }
+
+
+
