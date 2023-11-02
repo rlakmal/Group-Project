@@ -7,8 +7,9 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
-    
+
         }
+
         .profile-container2 {
             background-color: #ffffff;
             width: 900px;
@@ -17,10 +18,11 @@
             height: 150px;
             border-radius: 20px;
         }
-        .picture .image { 
-           max-width: 40px;
+
+        .picture .image {
+            max-width: 40px;
         }
-        
+
         .profile-name {
             font-size: 16px;
             font-weight: 700;
@@ -28,6 +30,7 @@
             font-family: 'Lato', sans-serif;
             margin: 10px 0;
         }
+
         .profile-type {
             font-size: 15px;
             font-weight: 700;
@@ -35,21 +38,26 @@
             font-family: 'Lato', sans-serif;
             margin: 10px 0;
         }
+
         .profile-ratings {
             font-size: 16px;
             color: #666;
-            
+
         }
+
         .budget {
             font-size: 18px;
             color: black;
         }
+
         .location {
             float: right;
-            font-size: 16px; /* Adjust the font size to make it readable */
+            font-size: 16px;
+            /* Adjust the font size to make it readable */
             color: black;
             margin-top: -100px;
         }
+
         .view-profile-button {
             margin-top: -40px;
             float: right;
@@ -62,6 +70,7 @@
             text-align: center;
             border-radius: 20px;
         }
+
         .edit-profile-button {
             margin-top: -40px;
             margin-left: 700px;
@@ -74,13 +83,15 @@
             text-align: center;
             border-radius: 20px;
         }
-        .index{
+
+        .index {
             margin-top: -50px;
             margin-left: 60px;
         }
-        .post-container{
+
+        .post-container {
             margin-top: 20px;
-            margin-left: 450px;
+            margin-left: 30%;
         }
     </style>
 </head>
@@ -89,19 +100,19 @@
     <div class="post-container">
         <div class="profile-container2">
             <div class="picture">
-                <img class="image" src="<?=ROOT?>/assets/images/employer/profile.jpg" alt="">
+                <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
             </div>
             <div class="index">
                 <div class="profile-name">Dasun Shanaka</div>
                 <div class="profile-ratings">2 hrs ago</div>
-                <div class="profile-type">තණකොළ කැපීමට සේවකයෙකු අවශ්‍යයි</div>            
+                <div class="profile-type">තණකොළ කැපීමට සේවකයෙකු අවශ්‍යයි</div>
                 <div class="budget">RS 3500/= per day</div>
                 <div class="location">Kadawatha</div>
-                
+
             </div>
             <a></a><button class="view-profile-button">Delete</button></a>
             <a></a><button class="edit-profile-button">Edit</button></a>
-            
+
         </div>
     </div>
 </body>

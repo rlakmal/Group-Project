@@ -13,31 +13,38 @@
             </li>
             <li>
                 <a href="<?= ROOT ?>/admin/workers">
-                    <i class="bx bxs-user-circle"></i>
+                    <i class="bx bxs-hard-hat"></i>
                     <span class="link_name">Workers</span>
                 </a>
                 <span class="tooltip">Workers</span>
             </li>
             <li>
-                <a href="#">
-                    <i class="bx bxs-user-circle"></i>
+                <a href="<?= ROOT ?>/admin/employers">
+                    <i class="bx bxs-user-detail"></i>
                     <span class="link_name">Users</span>
                 </a>
                 <span class="tooltip">Users</span>
             </li>
             <li>
-                <a href="#">
-                    <i class="bx bxs-user-circle"></i>
+                <a href="<?= ROOT ?>/admin/admincrew">
+                    <i class="bx bxs-group"></i>
                     <span class="link_name">Admin Crew</span>
                 </a>
                 <span class="tooltip">Admin Crew</span>
             </li>
             <li>
-                <a href="#">
-                    <i class="bx bxs-user-circle"></i>
+                <a href="<?= ROOT ?>/admin/adnotification">
+                    <i class="bx bxs-bell-plus"></i>
                     <span class="link_name">Notifications</span>
                 </a>
                 <span class="tooltip">Notifications</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-report"></i>
+                    <span class="link_name">Reports</span>
+                </a>
+                <span class="tooltip">Reports</span>
             </li>
             <li>
                 <a href="#">
@@ -46,6 +53,7 @@
                 </a>
                 <span class="tooltip">Profile</span>
             </li>
+
             <li class="profile">
                 <div class="profile_details">
                     <img src="<?= ROOT ?>/assets/images/manager/elon_musk.jpg" alt="profile image">

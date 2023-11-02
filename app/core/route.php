@@ -48,3 +48,6 @@ route('worker/workerprofile', 'worker/WorkerProfile@index');
 
 route('admin/home', 'admin/AdHome@index');
 route('admin/workers', 'admin/WorkersList@index');
+route('admin/employers', 'admin/EmployersList@index');
+route('admin/admincrew', 'admin/AdminCrew@index');
+route('admin/adnotification', 'admin/AdNotification@index');
