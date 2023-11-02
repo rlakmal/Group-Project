@@ -13,20 +13,30 @@ class Myjob extends Controller
             // $user = new User;
 
             $emp_id = $_SESSION['USER']->id;
-            
             $arr['emp_id'] = $emp_id;
 
-            // All posted jobs            
-            $result =$jobPost->where($arr,'id');
+            // employer posted jobs            
+            $result =$jobPost->where($arr,'emp_id');
             $data['data'] = $result;
 
+            // show($data);
+
             // job delete
-            // show();
             if (isset($_POST['jobDelete'])) {
                 $jobId = $_POST['id'];
                 // echo $jobId;
                 $this->jobDelete($jobId,$jobPost);
             }
+
+            show($_POST);
+            // job update 
+            if (isset($_POST['editPost'])) {
+
+                unset($_POST['editPost']);
+                // $this->jobUpdate();
+                
+            }
+
             $this->view('employer/myjob',$data);
             
         }else{
@@ -39,6 +49,10 @@ class Myjob extends Controller
 
         $jobPost->delete($jobId,'id');
         redirect('employer/myjob');
+
+    }
+
+    private function jobUpdate($jobId,$jobPost){
 
     }
 

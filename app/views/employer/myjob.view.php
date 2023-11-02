@@ -17,7 +17,7 @@
         <?php
         if (is_array($data)) {
             foreach ($data as $item) {
-                // show($item);
+
                 // තණකොළ කැපීමට සේවකයෙකු අවශ්‍යයි
                 date_default_timezone_set('Asia/Kolkata');
 
@@ -53,7 +53,7 @@
                             <div class="profile-name"><?php echo "Dasun" ?></div>
                             <div class="profile-ratings"><?php echo $times_ago ?></div>
                             <div class="profile-type"><?php echo $item->jobTitle ?></div>
-                            <div class="budget">RS <?php echo $item->budget ?>/= per day</div>
+                            <div class="budget">RS <?php echo $item->budget ?> /= per day</div>
                             <div class="location"><?php echo $item->city ?></div>
 
                         </div>
@@ -61,32 +61,33 @@
                             <input type="hidden" name="id" value="<?php echo $item->id ?>">
                             <button type="submit" name="jobDelete" value="Delete" class="view-profile-button">Delete</button>
                         </form>
-                        <button class="edit-profile-button" id="editButton" onclick="openEdit('dsvds')">Edit</button>
-
+                        <button type="submit" class="edit-profile-button" id="editButton" data-order='<?= json_encode($item) ?>' onclick="openEdit(this)">Edit</button>
                     </div>
                 </div>
         <?php
             }
         }
-
         ?>
     </div>
     <div class="popup-view">
         <form method="POST">
             <h2>Edit your Post</h2>
             <h4>Job Title : </h4>
-            <input name="jobTitle" type="text" placeholder="Enter Tiltle of the Job">
+            <input name="jobTitle" type="text" value="" required placeholder="Enter Tiltle of the Job">
             <h4>Budget : </h4>
-            <input name="budget" type="text" placeholder="Enter your Budget" autocomplete="off">
+            <input name="budget" type="text" value="" required placeholder="Enter your Budget" autocomplete="off">
             <h4>Address : </h4>
-            <input name="address" type="text" placeholder="Enter address">
+            <input name="address" type="text" value="" required placeholder="Enter address">
             <h4>City : </h4>
-            <input name="city" type="text" placeholder="Select Location">
+            <input name="city" type="text" value="" placeholder="Select Location">
             <h4>Description : </h4>
-            <input name="description" type="text" placeholder="Enter your description">
+            <input name="description" type="text" value="" required placeholder="Enter your description">
+
+            <input name="id" type="text" value="" >
+
             <div class="btns">
                 <button type="button" class="cancelR-btn" onclick="closeEdit()">Cancel</button>
-                <button name="postJob" type="submit" value="POST" class="close-btn" onclick="closeEdit()">POST</button>
+                <button name="editPost" type="submit" value="Post" class="close-btn">Post</button>
             </div>
         </form>
     </div>
