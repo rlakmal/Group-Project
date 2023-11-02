@@ -10,8 +10,8 @@
 
     <div class="select-container">
         <div class="search-container">
-            <input type="text" id="search" placeholder="Search...">
-            <button>Search</button>
+            <input type="text" class="search-box" id="search" placeholder="Search...">
+            <button type="submit" id="search-button">Search</button>
         </div>
    
   

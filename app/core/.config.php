@@ -5,6 +5,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     // database configaration 
 
     // define('DBHOST', 'localhost');
+
     define('DBHOST', 'localhost:3306');
     define('DBNAME', 'errand');
     define('DBUSER', 'root');

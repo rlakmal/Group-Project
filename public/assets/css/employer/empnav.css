@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "futura md bt";
-  text-decoration: none;
+  font-family: Tahoma, Verdana, sans-serif;
+   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
@@ -40,15 +40,18 @@
   transition: 0.2s;
   text-decoration: none;
   color: #ffffff;
-  background-color: #ff7f00; /* Light orange background color */
+  background-color: #f16a2d; /* Light orange background color */
   padding: 7px 5px;
   border-radius: 50px; /* Rounded button */
   transition: background-color 0.3s;
-  border: #232020 solid 0.8px;
+  border: #ffffff solid 1px;
+  cursor: pointer;
 }
 
 .homenavbar nav ul li a:hover {
-  background-color: rgb(222, 150, 92);
+  background-color: rgb(255, 255, 255);
+  color: #2a3441;
+  text-decoration: underline;
 }
 .homenavbar nav ul li a.clicked {
   border-bottom: 10px solid #7d3406;
@@ -175,6 +178,6 @@
 /* icons */
 
 .icons i{
-  font-size: 40px;
+  font-size: 25px;
   color: #fff;
 }
