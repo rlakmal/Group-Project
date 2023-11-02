@@ -58,11 +58,14 @@
                             <div class="profile-name"><?php echo "Dasun" ?></div>
                             <div class="profile-ratings"><?php echo $times_ago ?></div>
                             <div class="profile-type"><?php echo $item->jobTitle ?></div>
-                            <div class="budget">RS <?php echo $item->budget ?>/= per day</div>
+
+
+                            <div class="budget">Rs <?php echo $item->budget ?>/= per day</div>
                             <div class="location">
                                 <?php echo $item->city ?>
                                 <i class="bx bxs-map icon"></i>
                             </div>
+
 
                         </div>
                         <a><button class="view-profile-button" id="request-button">Request</button></a>

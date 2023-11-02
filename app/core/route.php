@@ -5,7 +5,9 @@
 route('home', 'Home@index');
 
 route('home/signin', 'SignIn@index');
-route('home/workerreg', 'worker/WorkerReg@index');
+route('home/workerreg', 'worker/WorkerRegistration@index');
+
+
 route('home/workerregnext', 'worker/WorkerRegNext@index');
 route('home/workerregthree', 'worker/WorkerRegThree@index');
 route('home/workerregfour', 'worker/WorkerRegFour@Index');
