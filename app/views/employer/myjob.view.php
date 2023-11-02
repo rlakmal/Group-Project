@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/jobPost.css">
+
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/jobpopup.css">
     <title>Errand</title>
 </head>
@@ -57,6 +58,7 @@
                             <div class="location"><?php echo $item->city ?></div>
 
                         </div>
+
                         <form method="POST">
                             <input type="hidden" name="id" value="<?php echo $item->id ?>">
                             <button type="submit" name="jobDelete" value="Delete" class="view-profile-button">Delete</button>
@@ -69,6 +71,7 @@
         }
         ?>
     </div>
+    
     <div class="popup-view">
         <form method="POST">
             <h2>Edit your Post</h2>
@@ -94,7 +97,6 @@
     <div id="overlay1" class="overlay"></div>
     <script src="<?= ROOT ?>/assets/js/employer/editpost.js"></script>
 
-
 </body>
 
-</html>
+</html>s

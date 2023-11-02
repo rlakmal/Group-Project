@@ -4,7 +4,7 @@
 <head>
     <title>Sidebar</title>
     <!-- Link Styles -->
-    <link rel="stylesheet" href="<?=ROOT ?>/assets/css/style-bar.css">
+    <link rel="stylesheet" href="<?= ROOT ?>/assets/css/style-bar.css">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/admin/dashboard.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -22,15 +22,15 @@
     <!-- content  -->
     <section id="main" class="main">
 
-        <h2>Your Orders</h2>
+        <h2>Data</h2>
 
         <form>
             <div class="form">
-				<input class="form-group" type="text" placeholder="Search...">
-				<i class='bx bx-search icon'></i>
-				<input class="new-btn" type="button" onclick="openNew()" value="+ New Order">
-				<input class="btn" type="button" onclick="openReport()" value="Report Problem">
-			</div>
+                <input class="form-group" type="text" placeholder="Search...">
+                <i class='bx bx-search icon'></i>
+                <input class="new-btn" type="button" onclick="openNew()" value="+ New ">
+                <input class="btn" type="button" onclick="openReport()" value="Report Problem">
+            </div>
 
         </form>
 
@@ -45,7 +45,7 @@
                     <th></th>
                 </tr>
             </thead>
-   
+
 
         </table>
 
@@ -53,7 +53,7 @@
 
 
     <!-- POPUP -->
-               
+
 
     <div class="popup-report">
         <h2>Report Your Problem</h2>
@@ -63,12 +63,12 @@
         <input type="text" placeholder="Enter your email">
         <h4>Problem : </h4>
         <textarea name="problem" id="problem" cols="30" rows="10" placeholder="Enter your problem"></textarea>
-		<div class="btns">
-			<button type="button" class="cancelR-btn" onclick="closeReport()">Cancel</button>
-			<button type="button" class="close-btn" onclick="closeReport()">Submit</button>
-		</div>
+        <div class="btns">
+            <button type="button" class="cancelR-btn" onclick="closeReport()">Cancel</button>
+            <button type="button" class="close-btn" onclick="closeReport()">Submit</button>
+        </div>
     </div>
-    
+
 
     <div class="popup-view" id="popup-view">
         <button type="button" class="update-btn pb">Update Order</button>
@@ -78,8 +78,7 @@
 
             <ul>
                 <li>
-                    <iconify-icon
-                        icon="streamline:interface-time-stop-watch-alternate-timer-countdown-clock"></iconify-icon>
+                    <iconify-icon icon="streamline:interface-time-stop-watch-alternate-timer-countdown-clock"></iconify-icon>
                     <div class="progress one">
 
                         <i class="uil uil-check"></i>
@@ -120,7 +119,7 @@
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details">Order Id </span>
-                        <input type="text" id=""  />
+                        <input type="text" id="" />
                     </div>
 
                     <div class="input-box">

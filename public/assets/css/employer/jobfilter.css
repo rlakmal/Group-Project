@@ -13,6 +13,7 @@ body {
   /* background-image: linear-gradient( 180deg, #100f0e, #0d1341 ); */
   font-size: 19px;
   height: 100%;
+  /* border-radius: 25px; */
   position: fixed;
 }
 
@@ -21,13 +22,31 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  border-radius: 50px;
+}
+
+/* Styles for the search box */
+.search-box {
+  width: 200px;
+  border-radius: 50px;
+  padding: 8px;
+  border: 2px solid #f16a2d;
+  border-radius: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Styles for when the search box is focused */
+.search-box:focus {
+  border-color: white;
+  box-shadow: 0 0 7px #ff904b;
 }
 
 input[type="text"] {
   width: 200px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 25px;
 }
 
 button {
@@ -35,26 +54,40 @@ button {
   background-color: #ff904b;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   margin-left: 10px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #f7b893;
+#request-button :hover{
+  text-decoration: underline;
+  background-color: #d26900;
 }
+
+button:hover {
+  text-decoration: underline;
+  background-color: #2a3441;
+}
+
+#search-button :hover{
+  text-decoration: none;
+  background-color: none;
+}
+
+
 
 /* Style for labels and select elements */
 label {
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 21px;
 }
 
 select {
-  width: 275px;
+  width: 200px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px;
+  border-right: 15px solid #fff;
+  border-radius: 25px;
 }
 
 /* Style for option elements in the select */
@@ -63,5 +96,5 @@ select option {
 }
 label {
   color: white;
-  padding-bottom: 30px;
+  padding-bottom: 2px;
 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/emphome.css">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/jobPost.css">
     <title>Document</title>
@@ -57,11 +58,18 @@
                             <div class="profile-name"><?php echo "Dasun" ?></div>
                             <div class="profile-ratings"><?php echo $times_ago ?></div>
                             <div class="profile-type"><?php echo $item->jobTitle ?></div>
+
+
                             <div class="budget">Rs <?php echo $item->budget ?>/= per day</div>
-                            <div class="location"><?php echo $item->city ?></div>
+                            <div class="location">
+                                <?php echo $item->city ?>
+                                <i class="bx bxs-map icon"></i>
+                            </div>
+
 
                         </div>
-                        <a><button class="view-profile-button">Request</button></a>
+                        <a><button class="view-profile-button" id="request-button">Request</button></a>
+
                         <!-- <a></a><button class="edit-profile-button">Edit</button></a> -->
 
                     </div>
