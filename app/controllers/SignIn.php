@@ -28,12 +28,13 @@ class SignIn extends Controller
         }
 
         $data['errors'] = $user->errors;
-
+        $data['loginData'] = $_POST;
+        
         // show($data);
         $this->view('signin', $data);
     }
 
-    public function signinVerify($user)
+    private function signinVerify($user)
     {
         // show($_POST);
         if ($user->formData($_POST)) {
@@ -71,14 +72,14 @@ class SignIn extends Controller
 
                 } else {
                     $data['errors'] = "";
-                    $user->errors = "Worng Email or Password";
+                    $user->errors = "Invalid Email or Password";
                     $data['errors'] = $user->errors;
                 }
             }
 
         } else {
             $data['errors'] = "";
-            $user->errors = "Worng Email or Password";
+            $user->errors = "Invalid Email or Password";
             $data['errors'] = $user->errors;
             // echo "Invalid Sign-In";
         }

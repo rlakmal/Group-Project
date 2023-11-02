@@ -10,7 +10,7 @@ Trait Model
     protected $limit        = 10;
     protected $offset       = 0;
     protected $order_type   = 'DESC';
-    public $errors       = 'id';
+    public $errors       = [];
     public function findAll($id = 'id')
     {
 
