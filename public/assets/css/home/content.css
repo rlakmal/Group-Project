@@ -86,7 +86,7 @@
 }
 .home-first-content .first_letter {
   font-size: 153px;
-  color:#f16a2d;
+  color: #f16a2d;
   font-weight: bold;
 }
 
@@ -121,13 +121,12 @@
   font-weight: 200;
 }
 
-.home-buttons{
+.home-buttons {
   width: 462px;
   height: 76px;
   align-items: center;
   justify-content: space-between;
   /* background-color: #000000; */
-
 }
 
 .home-first-content .button-hire {
@@ -164,23 +163,21 @@
 
 .home-first-content .button-hire:hover {
   background-color: #ffffff;
-  color:#2a3441;
+  color: #2a3441;
   text-decoration: underline;
   transform: scale(1.05);
   box-shadow: 0 3px 9px 2px rgba(64, 60, 67, 0.793);
 }
 
-
 .home-first-content .button-reg:hover {
-  background-color:#f16a2d;
+  background-color: #f16a2d;
   color: #fff;
   text-decoration: underline;
   transform: scale(1.05);
   box-shadow: 0 3px 9px 2px rgba(64, 60, 67, 0.793);
 }
 
-
-.home-first-content .button-hire:hover + .home-first-content .button-reg{
+.home-first-content .button-hire:hover + .home-first-content .button-reg {
   background-color: #f16a2d;
   color: #fff;
 }
@@ -210,12 +207,12 @@ span.subtitle {
   padding: 2% 2%;
   width: 30%;
   background-color: #f16a2d;
-  box-shadow: 0 3px 9px 2px rgba(64,60,67,.24);
+  box-shadow: 0 3px 9px 2px rgba(64, 60, 67, 0.24);
   border-radius: 25px;
   color: #fff;
 }
 
-.info{
+.info {
   border-color: #fff;
   border-radius: 2px;
   padding: 16px;
@@ -224,11 +221,11 @@ span.subtitle {
   border-radius: 25px;
 }
 
-.contact-button{
+.contact-button {
   background-color: #2a3441;
   color: #fff;
   border-radius: 25px;
-  
+
   height: 27px;
   width: 60px;
   cursor: pointer;
@@ -238,9 +235,9 @@ span.subtitle {
 background-color: #ee8452;
 } */
 
-.contact-button :hover{
+.contact-button :hover {
   text-decoration: underline;
-  box-shadow: 0 3px 9px 2px rgba(64,60,67,.24);
+  box-shadow: 0 3px 9px 2px rgba(64, 60, 67, 0.24);
   background-color: #fff;
   transform: scale(1.2);
   color: #2a3441;
@@ -446,5 +443,5 @@ form input[type="submit"] {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+    z-index: 10;
 }
