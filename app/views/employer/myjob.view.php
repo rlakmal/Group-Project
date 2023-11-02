@@ -53,7 +53,7 @@
                             <div class="profile-name"><?php echo "Dasun" ?></div>
                             <div class="profile-ratings"><?php echo $times_ago ?></div>
                             <div class="profile-type"><?php echo $item->jobTitle ?></div>
-                            <div class="budget">RS <?php echo $item->budget ?> /= per day</div>
+                            <div class="budget">Rs <?php echo $item->budget ?> /= per day</div>
                             <div class="location"><?php echo $item->city ?></div>
 
                         </div>
@@ -83,7 +83,7 @@
             <h4>Description : </h4>
             <input name="description" type="text" value="" required placeholder="Enter your description">
 
-            <input name="id" type="text" value="" >
+            <input name="id" type="hidden" value="" >
 
             <div class="btns">
                 <button type="button" class="cancelR-btn" onclick="closeEdit()">Cancel</button>

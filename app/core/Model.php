@@ -2,7 +2,7 @@
 
 require_once 'Database.php';
 
-Trait Model
+trait Model
 {
 
     use Database;
@@ -59,19 +59,19 @@ Trait Model
         $this->quary($quary, $data);
         return false;
     }
-    
+
     public function update($id, $data, $id_column = 'id')
     {
         $keys = array_keys($data);
         $quary = "UPDATE $this->table SET ";
-        
+
         foreach ($keys as $key) {
             $quary .= $key . " = :" . $key . ", ";
         }
-        
+
         $quary = trim($quary, " , ");
         $quary .= " WHERE $id_column = :$id_column ";
-        
+
         $data[$id_column] = $id;
 
         // echo $quary;
@@ -89,13 +89,13 @@ Trait Model
         // echo $quary;
 
         // run the quary stage
-        $this->quary($quary, $data); 
+        $this->quary($quary, $data);
 
         return false;
     }
 
 
-   public function where($data,$id = 'id' ,$data_not = [])
+    public function where($data, $id = 'id', $data_not = [])
     {
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);

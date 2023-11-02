@@ -32,36 +32,42 @@
 
     <div class="main-container4">
         <div class="profile-container3">
-            <a href="<?= ROOT ?>/employer/profile"><button class="close-button">Done</button></a>
+            <form method="POST">
 
-            <div class="picture">
-                <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
-            </div>
-            <div class="picture">
-                <img class="rates" src="<?= ROOT ?>/assets/images/employer/rates.png" alt="">
-            </div>
+                <button type="submit" class="close-button" value="Edit" name="edit">Done</button>
+                <div class="picture">
+                    <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
+                </div>
+                <div class="picture">
+                    <img class="rates" src="<?= ROOT ?>/assets/images/employer/rates.png" alt="">
+                </div>
 
-            <div class="index">
+                <div class="index">
 
-                <h3>
-                    Full Name
-                </h3>
+                    <h3>
+                        Full Name
+                    </h3>
+                    <input type="text" name="name" value="<?php echo ucfirst($data['newData']['name']); ?>" placeholder="Empty Full Name" class="edit-gen">
+                    <h3>
+                        NIC Number
+                    </h3>
 
-                <input type="text" name="fullname" value="" class="edit-gen">
-                <h3>
-                    City
-                </h3>
-                <input type="text" name="city" value="" class="edit-gen">
-                <h3>
-                    Address
-                </h3>
-                <input type="text" name="address" value="" class="edit-gen">
-                <h3>
-                    Date of Birth
-                </h3>
-                <input type="text" name="birthday" value='' class="edit-gen">
+                    <input type="text" name="nic" value="<?php echo $data['newData']['nic']; ?>" placeholder="Empty NIC Number" class="edit-gen">
+                    <h3>
+                        City
+                    </h3>
+                    <input type="text" name="city" value="<?php echo ucfirst($data['newData']['city']); ?>" class="edit-gen" placeholder="Empty City">
+                    <h3>
+                        Address
+                    </h3>
+                    <input type="text" name="address" value="<?php echo $data['newData']['address']; ?>" class="edit-gen" placeholder="Empty Address">
+                    <h3>
+                        Date of Birth
+                    </h3>
+                    <input type="text" name="dob" value="<?php echo $data['newData']['dob']; ?>" class="edit-gen" placeholder="Empty Date of Birth">
 
-            </div>
+                </div>
+            </form>
 
         </div>
 </body>

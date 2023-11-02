@@ -82,6 +82,12 @@ body {
   border: none;
   min-width: 400px;
 }
+
+/* input:focus {
+ outline: none !important;
+
+} */
+
 .edit-gen-skill {
   height: 150px;
 }

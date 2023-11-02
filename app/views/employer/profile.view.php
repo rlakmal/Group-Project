@@ -46,20 +46,24 @@
         <h3>
           Full Name
         </h3>
+        <input type="text" name="fullname" value="<?php echo ucfirst($data['newData']['name']); ?>" placeholder="Empty Full Name" class="edit-gen" readonly>
+        <h3>
+          NIC Number
+        </h3>
 
-        <input type="text" name="fullname" value="Dasun Shanaka" class="edit-gen" readonly>
+        <input type="text" name="nic" value="<?php echo $data['newData']['nic'];?>" placeholder="Empty NIC Number" class="edit-gen" readonly>
         <h3>
           City
         </h3>
-        <input type="text" name="city" value="Hambanthota" class="edit-gen" readonly>
+        <input type="text" name="city" value="<?php echo ucfirst($data['newData']['city']); ?>" class="edit-gen" placeholder="Empty City" readonly>
         <h3>
           Address
         </h3>
-        <input type="text" name="address" value="27/A, School Road, Sooriyawewa" class="edit-gen" readonly>
+        <input type="text" name="address" value="<?php echo $data['newData']['address']; ?>" class="edit-gen"  placeholder="Empty Address" readonly>
         <h3>
           Date of Birth
         </h3>
-        <input type="text" name="birthday" value='2012-12-12' class="edit-gen" readonly>
+        <input type="text" name="birthday" value="<?php echo $data['newData']['dob']; ?>" class="edit-gen" placeholder="Empty Date of Birth" readonly>
 
       </div>
 

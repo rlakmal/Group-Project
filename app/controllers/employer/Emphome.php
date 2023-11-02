@@ -9,23 +9,27 @@ class Emphome extends Controller
 
         if ($username != 'User' && $_SESSION['USER']->status == 'employer') {
 
-            $jobPost = new JobPost;
+            try {
+                $jobPost = new JobPost;
 
-            // All posted jobs
-            $data = $this->getAllJob($jobPost);
+                // All posted jobs
+                $data = $this->getAllJob($jobPost);
 
-            // Post job
-            if (isset($_POST['postJob'])) {
-                // data validation 
+                // Post job
+                if (isset($_POST['postJob'])) {
 
-                unset($_POST['postJob']);
+                    // data validation 
 
-                $emp_id = $_SESSION['USER']->id;
-                $_POST['emp_id'] = $emp_id;
+                    unset($_POST['postJob']);
 
-                // show($_POST);
-                $jobPost->insert($_POST);
-                redirect('employer/home');
+                    $emp_id = $_SESSION['USER']->id;
+                    $_POST['emp_id'] = $emp_id;
+
+                    $jobPost->insert($_POST);
+                    redirect('employer/home');
+                }
+            } catch (Exception $e) {
+                //throw $th;
             }
 
             $this->view('employer/emphome', $data);
@@ -36,9 +40,10 @@ class Emphome extends Controller
 
     private function getAllJob($jobPost)
     {
-        $result = $jobPost->findAll('id');
+        $result = $jobPost->findAll('created');
 
         $data['data'] = $result;
         return  $data;
     }
+    
 }

@@ -4,56 +4,65 @@ class Myjob extends Controller
 {
     public function index($a = '', $b = '', $c = '')
     {
-        
+
         $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
-        
-        if ($username != 'User' && $_SESSION['USER']->status =='employer') {
-            
-            $jobPost = new JobPost;
-            // $user = new User;
 
-            $emp_id = $_SESSION['USER']->id;
-            $arr['emp_id'] = $emp_id;
+        if ($username != 'User' && $_SESSION['USER']->status == 'employer') {
 
-            // employer posted jobs            
-            $result =$jobPost->where($arr,'emp_id');
-            $data['data'] = $result;
+            try {
 
-            // show($data);
+                $jobPost = new JobPost;
 
-            // job delete
-            if (isset($_POST['jobDelete'])) {
-                $jobId = $_POST['id'];
-                // echo $jobId;
-                $this->jobDelete($jobId,$jobPost);
+                $emp_id = $_SESSION['USER']->id;
+                $arr['emp_id'] = $emp_id;
+
+                // view employer posted jobs            
+                $result = $jobPost->where($arr, 'created');
+                $data['data'] = $result;
+
+                // job delete
+                if (isset($_POST['jobDelete'])) {
+                    $jobId = $_POST['id'];
+                    // echo $jobId;
+                    $this->jobDelete($jobId, $jobPost);
+                }
+
+                // job update 
+                if (isset($_POST['editPost'])) {
+
+                    unset($_POST['editPost']);
+                    $this->jobUpdate($_POST, $jobPost);
+                }
+            } catch (Exception $e) {
+                //throw $th;
             }
 
-            show($_POST);
-            // job update 
-            if (isset($_POST['editPost'])) {
-
-                unset($_POST['editPost']);
-                // $this->jobUpdate();
-                
-            }
-
-            $this->view('employer/myjob',$data);
-            
-        }else{
+            $this->view('employer/myjob', $data);
+        } else {
             redirect('home');
         }
     }
 
     // each employer created job delete method
-    private function jobDelete($jobId,$jobPost){
-
-        $jobPost->delete($jobId,'id');
+    private function jobDelete($data, $jobPost)
+    {
+        $jobPost->delete($data, 'id');
         redirect('employer/myjob');
-
     }
 
-    private function jobUpdate($jobId,$jobPost){
+    // each employer created job update method
+    private function jobUpdate($data, $jobPost)
+    {
+        $id = $data['id'];
+        unset($data['id']);
 
+        date_default_timezone_set('Asia/Kolkata');
+
+        $date = new DateTime();
+        $formattedTime = $date->format('Y-m-d H:i:s');
+        $data['created'] = $formattedTime;
+        // show($data);
+        $jobPost->update($id, $data, 'id');
+        redirect('employer/myjob');
     }
-
 }

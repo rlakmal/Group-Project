@@ -4,8 +4,38 @@ class EmployerProfile extends Controller
 {
     public function index($a = '', $b = '', $c = '')
     {
-        // echo "this is a about controller";
-        $this->view('employer/profile');
-    }
+        $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
 
+        if ($username != 'User' && $_SESSION['USER']->status == 'employer') {
+
+            $user = new User;
+
+            $use_id = $_SESSION['USER']->id;
+
+            $data = $this->create($user, $use_id);
+            
+            $this->view('employer/profile',$data);
+        } else {
+            redirect('home');
+        }
+    }
+    
+    // find user details
+    private function create($user, $use_id){
+        
+        $arr['id'] = $use_id;
+        
+        $result = $user->first($arr);
+    
+        $newData['name'] = $result->name;
+        $newData['nic'] = $result->nic;
+        $newData['city'] = $result->city;
+        $newData['address'] = $result->address;
+        $newData['dob'] = $result->dob;
+        
+        $data['newData'] = $newData;
+
+        return $data;
+
+    }
 }

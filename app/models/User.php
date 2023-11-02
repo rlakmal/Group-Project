@@ -10,8 +10,13 @@ class User
 	protected $allowedCloumns = [
 		'name',
 		'email',
+		'nic',
+		'dob',
+		'city',
+		'address',
 		'password',
-		'status'
+		'status',
+		'is_active',
 	];
 
 	public function validate($data)
@@ -102,9 +107,9 @@ class User
 		if (empty($errors)) {
 			return true;
 		} else {
-			$errors['password1']=$data['password'];
-			$errors['email1']=$data['email'];
-			
+			$errors['password1'] = $data['password'];
+			$errors['email1'] = $data['email'];
+
 			return false;
 		}
 	}
