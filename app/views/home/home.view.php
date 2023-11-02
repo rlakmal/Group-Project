@@ -13,25 +13,30 @@
     <div class="maincontainer">
         <div class="home-first-content">
             <div>
-                <span class="title"><span class="first_letter">E</span>rrand</span><br>
+                <div class="logo-name">
+                    <span class="title"><span class="first_letter">E</span>rrand</span><br>
+                </div>
                 <span>Reliable Hands Good Works</span><br>
-                <a href="<?= ROOT ?>/home/workerreg" class="active"><button class="button">Register As Worker</button></a>
-                <a href="<?= ROOT ?>/home/signin" class="active"><button class="button">Want to Hire workers</button></a>
+                <div class="home-buttons">
+                    <a href="<?= ROOT ?>/home/workerreg" class="active"><button class="button-reg">Register As Worker</button></a>
+                    <a href="<?= ROOT ?>/home/signin" class="active"><button class="button-hire">Want to Hire workers</button></a>  
+                </div>
             </div>
 
         </div>
 
         <div class="two-content-div">
             <div class="two-content-div-one">
-                <span class="title">Friendly Service <br> Guaranteed</span><br>
+                <span class="title">Friendly Service <br><br> Guaranteed</span><br>
             </div>
             <div class="two-content-div-form">
                 <span class="subtitle">Contact Us</span>
                 <form>
-                    <input type="text" placeholder="First Name"><br>
-                    <input type="text" placeholder="Last Name"><br>
-                    <input type="text" placeholder="Email"><br>
-                    <input type="submit" value="Contact" class="button">
+                    <input type="text" class="info" placeholder="First Name"><br>
+                    <input type="text" class="info" placeholder="Last Name"><br>
+                    <input type="text" class="info" placeholder="Email"><br>
+                    <!-- <button class="contact-button">Contact</button> -->
+                    <input type="submit" value="  Contact  " class="contact-button">
                 </form>
             </div>
         </div>
