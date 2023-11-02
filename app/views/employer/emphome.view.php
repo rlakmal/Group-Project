@@ -66,6 +66,7 @@
 
                         </div>
                         <a><button class="view-profile-button" id="request-button">Request</button></a>
+
                         <!-- <a></a><button class="edit-profile-button">Edit</button></a> -->
 
                     </div>

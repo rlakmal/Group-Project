@@ -7,15 +7,12 @@ class Emphome extends Controller
 
         $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
 
-        if ($username != 'User') {
+        if ($username != 'User' && $_SESSION['USER']->status == 'employer') {
 
             $jobPost = new JobPost;
 
             // All posted jobs
-            $result = $jobPost->findAll('id');
-
-            $data['data'] = $result;
-            // show($data);
+            $data = $this->getAllJob($jobPost);
 
             // Post job
             if (isset($_POST['postJob'])) {
@@ -35,5 +32,13 @@ class Emphome extends Controller
         } else {
             redirect('home');
         }
+    }
+
+    private function getAllJob($jobPost)
+    {
+        $result = $jobPost->findAll('id');
+
+        $data['data'] = $result;
+        return  $data;
     }
 }

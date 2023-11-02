@@ -38,19 +38,21 @@
                             <h6>Not Registred Yet ?</h6>
                             <a href="#" class="toggle">Sign Up</a>
                         </div>
-                        <?php if (isset($data)) {
-                            show($data);
-                        } else {
-                            // echo "svgfvfs";
+                        <?php
+
+                        if (!empty($data['errors'])) {
+                            echo $data['errors'];
                         } ?>
-                        <div></div>
+                        
                         <div class="actual-form">
                             <div class="input-wrap">
-                                <input type="text" name="email" class="input-field"  autocomplete="on" minlength="5">
+                                <input type="text" name="email" value="<?php echo !empty($data['loginData']) ? htmlspecialchars($data['loginData']['email']):'';?>" class="input-field" autocomplete="on" minlength="5">
+                                <!-- <input type="text" value="" name="email" class="input-field" autocomplete="on" minlength="5"> -->
                                 <label for="email">Email</label>
                             </div>
                             <div class="input-wrap">
-                                <input type="password" name="password" class="input-field"  autocomplete="on">
+                                <input type="password" name="password" value="<?php echo !empty($data['loginData']) ? htmlspecialchars($data['loginData']['password']):'';?>" class="input-field" autocomplete="on">
+                                <!-- <input type="password" name="password" class="input-field" autocomplete="on"> -->
                                 <label for="pass">Password</label>
                                 <a href="#" class="hide active">
                                     <ion-icon name="eye-outline"></ion-icon>

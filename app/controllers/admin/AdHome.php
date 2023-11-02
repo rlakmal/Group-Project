@@ -6,7 +6,8 @@ class AdHome extends Controller
     {
         $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
         
-        if ($username != 'User') {
+        if ($username != 'User' && $_SESSION['USER']->status == 'admin') {
+
             $this->view('admin/home');
         }else{
             redirect('home');

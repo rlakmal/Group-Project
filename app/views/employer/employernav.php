@@ -61,13 +61,13 @@
             <h4>Job Title : </h4>
             <input name="jobTitle" type="text" placeholder="Enter Tiltle of the Job">
             <h4>Budget : </h4>
-            <input name="budget" type="text" placeholder="Enter your Budget"  autocomplete="off">
+            <input name="budget" type="text" placeholder="Enter your Budget" autocomplete="off">
             <h4>Address : </h4>
             <input name="address" type="text" placeholder="Enter address">
             <h4>City : </h4>
             <input name="city" type="text" placeholder="Select Location">
             <h4>Description : </h4>
-            <input name="description"  type="text" placeholder="Enter your description">
+            <input name="description" type="text" placeholder="Enter your description">
             <div class="btns">
                 <button type="button" class="cancelR-btn" onclick="closeReport()">Cancel</button>
                 <button name="postJob" type="submit" value="POST" class="close-btn" onclick="closeReport()">POST</button>
@@ -75,7 +75,8 @@
         </form>
     </div>
     <div id="overlay" class="overlay"></div>
-    <script src="<?= ROOT ?>/assets/js/employer/addpost.js"></script>
+
 </body>
+<script src="<?= ROOT ?>/assets/js/employer/addpost.js"></script>
 
 </html>

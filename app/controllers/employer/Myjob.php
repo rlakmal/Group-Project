@@ -7,7 +7,7 @@ class Myjob extends Controller
         
         $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
         
-        if ($username != 'User') {
+        if ($username != 'User' && $_SESSION['USER']->status =='employer') {
             
             $jobPost = new JobPost;
             // $user = new User;
@@ -15,19 +15,31 @@ class Myjob extends Controller
             $emp_id = $_SESSION['USER']->id;
             
             $arr['emp_id'] = $emp_id;
-            // All posted jobs
-            // show($arr);
+
+            // All posted jobs            
             $result =$jobPost->where($arr,'id');
-
             $data['data'] = $result;
-            // show($result);
 
-    
+            // job delete
+            // show();
+            if (isset($_POST['jobDelete'])) {
+                $jobId = $_POST['id'];
+                // echo $jobId;
+                $this->jobDelete($jobId,$jobPost);
+            }
             $this->view('employer/myjob',$data);
             
         }else{
             redirect('home');
         }
+    }
+
+    // each employer created job delete method
+    private function jobDelete($jobId,$jobPost){
+
+        $jobPost->delete($jobId,'id');
+        redirect('employer/myjob');
+
     }
 
 }
