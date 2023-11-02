@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/jobPost.css">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/jobpopup.css">
-
-
-    <title>Document</title>
+    <title>Errand</title>
 </head>
 
 <body>
@@ -59,7 +57,10 @@
                             <div class="location"><?php echo $item->city ?></div>
 
                         </div>
-                        <a><button class="view-profile-button" >Delete</button></a>
+                        <form method="POST">
+                            <input type="hidden" name="id" value="<?php echo $item->id ?>">
+                            <button type="submit" name="jobDelete" value="Delete" class="view-profile-button">Delete</button>
+                        </form>
                         <button class="edit-profile-button" id="editButton" onclick="openEdit('dsvds')">Edit</button>
 
                     </div>
@@ -67,8 +68,8 @@
         <?php
             }
         }
-    }
-    ?>
+
+        ?>
     </div>
     <div class="popup-view">
         <form method="POST">
