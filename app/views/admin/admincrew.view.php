@@ -47,70 +47,87 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>12345</td>
-                    <td>John Doe</td>
-                    <td>johndoe@example.com</td>
-                    <td class="edit-icon"><a onclick="openView()" href="#">
-                            <i class="bx bxs-edit-alt"></i>
-                            <span class="link_name"></span>
-                        </a></td>
-                    <td class="<?php if (0) {
+                <?php
+                if (is_array($data)) {
+                    $i = 1;
+                    foreach ($data as $item) {
+                ?>
+                        <tr>
+                            <td><?php echo $i++; ?></td>
+                            <td><?php echo $item->id; ?></td>
+                            <td><?php echo $item->name; ?></td>
+                            <td><?php echo $item->username; ?></td>
+
+                            <td class="edit-icon"><a type="hidden" data-order=<?= json_encode($item); ?> onclick="openView(this)">
+                                    <i class="bx bxs-edit-alt"></i>
+                                    <span class="link_name"></span>
+                                </a></td>
+                            <td>
+                                <form method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $item->id; ?>">
+                                    <button name="active" value="valid" class="
+                                <?php if ($item->active) {
                                     echo "is_active";
                                 } else {
                                     echo "is_deactive";
                                 } ?> ">
-                        <p>A</p>
-                    </td>
+                                        <?php if ($item->active) {
+                                            echo "Delete";
+                                        } else {
+                                            echo "Delete";
+                                        } ?>
+                                    </button>
+                                </form>
 
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>67890</td>
-                    <td>Jane Smith</td>
-                    <td>janesmith@example.com</td>
-                    <td class="edit-icon"><a onclick="openView()" href="#">
-                            <i class="bx bxs-edit-alt"></i>
-                            <span class="link_name"></span>
-                        </a></td>
-                    <td class="is_active"></td>
-                </tr>
-                <!-- Add more rows with dummy data as needed -->
+                            </td>
+
+                        </tr>
+
+                <?php
+                    }
+                }
+                ?>
             </tbody>
-
-
         </table>
-
-
     </section>
 
+
+    <!-- add members -->
     <div class="popup-report">
         <h2>New Crew Member Registration</h2>
         <h4> name : </h4>
-        <input type="text" placeholder="Enter Member name">
-        <h4>Username : </h4>
-        <input type="text" placeholder="Enter Member email">
-        <h4>Password : </h4>
-        <input type="text" placeholder="Enter Member email">
-        <div class="btns">
-            <button type="button" class="cancelR-btn" onclick="closeReport()">Cancel</button>
-            <button type="button" class="close-btn" onclick="closeReport()">Submit</button>
-        </div>
+        <form method="POST">
+
+            <input name="name" type="text" placeholder="Enter Member name">
+            <h4>Username : </h4>
+            <input name="username" type="text" placeholder="Enter Member email">
+            <h4>Password : </h4>
+            <input name="password" type="text" placeholder="Enter Member password">
+            <div class="btns">
+                <button type="button" class="cancelR-btn" onclick="closeReport()">Cancel</button>
+                <button type="submit" name="memberRegister" value="Submit" class="close-btn" onclick="closeReport()">Submit</button>
+            </div>
+        </form>
     </div>
 
+    <!-- update members -->
     <div class="popup-view">
         <h2>Update Crew Member</h2>
-        <h4> name : </h4>
-        <input type="text" placeholder="Enter Member name">
-        <h4>Username : </h4>
-        <input type="text" placeholder="Enter Member email">
-        <h4>Password : </h4>
-        <input type="text" placeholder="Enter Member email">
-        <div class="btns">
-            <button type="button" class="cancelR-btn" onclick="closeView()">Cancel</button>
-            <button type="button" class="close-btn" onclick="closeView()">Submit</button>
-        </div>
+        <form method="POST">
+
+            <h4> name : </h4>
+            <input name="name" type="text" placeholder="Enter Member name">
+            <h4>Username : </h4>
+            <input name="username" type="text" placeholder="Enter Member email">
+            <h4>Password : </h4>
+            <input name="password" type="text" placeholder="Enter Member email">
+            <input type="hidden" name="id">
+            <div class="btns">
+                <button type="button" class="cancelR-btn" onclick="closeView()">Cancel</button>
+                <button type="submit" name="member" value="Update" class="close-btn" onclick="closeView()">Update</button>
+            </div>
+
+        </form>
     </div>
 
 

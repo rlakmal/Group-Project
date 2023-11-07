@@ -61,7 +61,12 @@
                         <div class="name">Admin 1</div>
                     </div>
                 </div>
-                <i class="bx bx-log-out" id="log_out"></i>
+                <a href="<?= ROOT ?>/home">
+                    <i class="bx bx-log-out" id="log_out"></i>
+                    <span class="link_name">Logout</span>
+                </a>
+                <span class="tooltip">logOut</span>
+
             </li>
         </ul>
     </div>

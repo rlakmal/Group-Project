@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/message/normalize.css">
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/employer/message/style.css">
 </head>
+
 <body>
-<?php include 'employernav.php'?>
+    <?php include 'employernav.php' ?>
     <div class="wrapper-mobile">
-        <!-- <div class="mobile"><img src="<?=ROOT?>/assets/images/employer/message/lone-logo.svg">Not available on Tablet or Mobile devices.</div> -->
+        <!-- <div class="mobile"><img src="<?= ROOT ?>/assets/images/employer/message/lone-logo.svg">Not available on Tablet or Mobile devices.</div> -->
     </div>
     <div class="wrapper">
 
@@ -20,7 +21,7 @@
 
             <div class="container">
 
-                <div class="left"><img src="<?=ROOT?>/assets/images/employer/message/logo.svg"></div>
+                <!-- <div class="left"><img src="<?= ROOT ?>/assets/images/employer/message/logo.svg"></div> -->
 
                 <div class="middle">
                     <h3>Theresa Hudson</h3>
@@ -30,9 +31,10 @@
                 <div class="right">
 
                     <div class="username">
-                        <div class="settings"><img src="<?=ROOT?>/assets/images/employer/message/settings.svg"></div>Patrcia Fields</div>
+                        <div class="settings"><img src="<?= ROOT ?>/assets/images/employer/message/settings.svg"></div>Patrcia Fields
+                    </div>
 
-                    <div class="avatar"><img src="<?=ROOT?>/assets/images/employer/message/avatar.png"></div>
+                    <div class="avatar"><img src="<?= ROOT ?>/assets/images/employer/message/avatar.png"></div>
                 </div>
             </div>
         </header>
@@ -44,9 +46,10 @@
 
                     <div class="messages">
                         <li>
-                        <div class="avatar">
+                            <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-2.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-2.png">
+                                </div>
                             </div>
                             <h3>Nancy Scott</h3>
                             <p>Be there soon.</p>
@@ -57,7 +60,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-3.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-3.png">
+                                </div>
                             </div>
                             <h3>Cynthia Castro</h3>
                             <p>You: Yep, let's do it!</p>
@@ -68,7 +72,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-4.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-4.png">
+                                </div>
                             </div>
                             <h3>Philip Nelson</h3>
                             <p>How does it look? I started making it a while ago</p>
@@ -79,7 +84,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-5.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-5.png">
+                                </div>
                             </div>
                             <h3>Theresa Hudson</h3>
                             <p>Goddamn Aliens! &#128514;</p>
@@ -90,7 +96,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-4.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-4.png">
+                                </div>
                             </div>
                             <h3>Rebecca Jackson</h3>
                             <p>Hello</p>
@@ -101,7 +108,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-2.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-2.png">
+                                </div>
                             </div>
                             <h3>Ethan Gitson</h3>
                             <p>You: Send it again</p>
@@ -112,7 +120,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar.png">
+                                </div>
                             </div>
                             <h3>Betty Scott</h3>
                             <p>&#128512;</p>
@@ -123,7 +132,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar.png">
+                                </div>
                             </div>
                             <h3>Hannah Shaw</h3>
                             <p>Ohh yes! i was looking for that somewhere</p>
@@ -135,7 +145,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-5.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-5.png">
+                                </div>
                             </div>
                             <h3>Nancy Scott</h3>
                             <p>Be there soon.</p>
@@ -146,7 +157,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-4.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-4.png">
+                                </div>
                             </div>
                             <h3>Cynthia Castro</h3>
                             <p>You: Yep, let's do it!</p>
@@ -157,7 +169,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-3.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-3.png">
+                                </div>
                             </div>
                             <h3>Philip Nelson</h3>
                             <p>How does it look?</p>
@@ -168,7 +181,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-3.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-3.png">
+                                </div>
                             </div>
                             <h3>Theresa Hudson</h3>
                             <p>Goddamn Aliens! &#128514;</p>
@@ -179,7 +193,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar.png">
+                                </div>
                             </div>
                             <h3>Rebecca Jackson</h3>
                             <p>Hello</p>
@@ -190,7 +205,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-5.png"></div>
+                                    <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-5.png">
+                                </div>
                             </div>
                             <h3>Ethan Gitson</h3>
                             <p>You: Send it again</p>
@@ -201,7 +217,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar-4.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar-4.png">
+                                </div>
                             </div>
                             <h3>Betty Scott</h3>
                             <p>&#128512;</p>
@@ -212,7 +229,8 @@
 
                             <div class="avatar">
                                 <div class="avatar-image">
-                                    <div class="status offline"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar.png"></div>
+                                    <div class="status offline"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar.png">
+                                </div>
                             </div>
                             <h3>Hannah Shaw</h3>
                             <p>Ohh yes! i was looking for that</p>
@@ -333,7 +351,7 @@
 
                         <input placeholder="Type a message">
                         <div class="compose-dock">
-                            <div class="dock"><img src="./img/picture.svg"><img src="<?=ROOT?>/assets/images/employer/message/smile.svg"></div>
+                            <div class="dock"><img src="./img/picture.svg"><img src="<?= ROOT ?>/assets/images/employer/message/smile.svg"></div>
                         </div>
 
                     </div>
@@ -350,14 +368,15 @@
 
                         <div class="avatar">
                             <div class="avatar-image">
-                                <div class="status online"></div><img src="<?=ROOT?>/assets/images/employer/message/avatar.png"></div>
+                                <div class="status online"></div><img src="<?= ROOT ?>/assets/images/employer/message/avatar.png">
+                            </div>
 
                             <h3>Theresa Hudson</h3>
                             <p>London, United Kingdom</p>
 
                         </div>
 
-                    </div>   
+                    </div>
 
                 </div>
 

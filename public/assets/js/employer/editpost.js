@@ -21,7 +21,7 @@ function closeEdit() {
 
 // edit form for bind that data
 function dataBindtoForm(data) {
-  console.log(data);
+  // console.log(data);
 
   document.querySelector('.popup-view input[name="id"]').value =
     data.id;

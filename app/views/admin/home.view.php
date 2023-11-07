@@ -38,10 +38,10 @@
             <thead>
                 <tr>
                     <th></th>
-                    <th class="ordId">OrderId</th>
-                    <th class="desc">Description</th>
-                    <th class="stth">Status</th>
-                    <th class="cost">Cost</th>
+                    <th class="ordId">Total Workers</th>
+                    <th class="desc">Categories</th>
+                    <th class="stth">Current Week</th>
+                    <th class="cost">Profit</th>
                     <th></th>
                 </tr>
             </thead>

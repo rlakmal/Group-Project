@@ -27,7 +27,7 @@
             </nav>
             <div class="icons">
                 <a href="<?= ROOT ?>/employer/message">
-                     <i class="bx bxs-chat icon"></i>
+                    <i class="bx bxs-chat icon"></i>
                 </a>
                 <!-- <a href="<?= ROOT ?>/employer/message"><img src="<?= ROOT ?>/assets/images/employer/msg.png" alt="Message"></a> -->
                 <a href="#">
@@ -45,6 +45,7 @@
                         <a class="bttn" onclick="openReport()">Post Job</a>
                         <a href="<?= ROOT ?>/employer/message">Message</a>
                         <a href="<?= ROOT ?>/employer/profile">Profile</a>
+                        <a href="<?= ROOT ?>/home">LogOut</a>
                     </div>
                 </div>
             </div>
