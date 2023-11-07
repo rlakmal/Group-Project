@@ -16,7 +16,7 @@ class WorkerRegistration extends Controller
             unset($_POST['gender']);
             unset($_POST['re-password']);
 
-            //         $_POST['status'] = 'employer';
+            $_POST['status'] = 'worker';
 
             //         $user->insert($_POST);
             //         redirect('home/signin');
@@ -29,8 +29,8 @@ class WorkerRegistration extends Controller
             $password = $_POST['password'];
             $hash = password_hash($password, PASSWORD_BCRYPT);
             $_POST['password'] = $hash;
-            
-            show($_POST);
+
+            // show($_POST);
 
             $user->insert($_POST);
             // redirect('home/workerreg');
