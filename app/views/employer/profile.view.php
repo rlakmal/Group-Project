@@ -35,7 +35,7 @@
       <a href="<?= ROOT ?>/employer/editprofile"><button class="close-button">Edit profile</button></a>
 
       <div class="picture">
-        <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
+        <img class="image" src="<?= ROOT ?>/assets/images/profileImages/<?php echo $data['newData']['profile_image']  ?>" alt="Image">
       </div>
       <div class="picture">
         <img class="rates" src="<?= ROOT ?>/assets/images/employer/rates.png" alt="">
@@ -51,7 +51,7 @@
           NIC Number
         </h3>
 
-        <input type="text" name="nic" value="<?php echo $data['newData']['nic'];?>" placeholder="Empty NIC Number" class="edit-gen" readonly>
+        <input type="text" name="nic" value="<?php echo $data['newData']['nic']; ?>" placeholder="Empty NIC Number" class="edit-gen" readonly>
         <h3>
           City
         </h3>
@@ -59,7 +59,7 @@
         <h3>
           Address
         </h3>
-        <input type="text" name="address" value="<?php echo $data['newData']['address']; ?>" class="edit-gen"  placeholder="Empty Address" readonly>
+        <input type="text" name="address" value="<?php echo $data['newData']['address']; ?>" class="edit-gen" placeholder="Empty Address" readonly>
         <h3>
           Date of Birth
         </h3>

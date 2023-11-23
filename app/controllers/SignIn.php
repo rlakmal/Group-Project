@@ -8,7 +8,7 @@ class SignIn extends Controller
 
         // sign in validation
         if (isset($_POST['signIn'])) {
-            // show($_POST);
+            //show($_POST);
             $this->signinVerify($user);
         }
 
@@ -21,6 +21,7 @@ class SignIn extends Controller
                 unset($_POST['signUp']);
 
                 $_POST['status'] = 'employer';
+                $_POST['profile_image'] = 'prof.png';
 
                 $user->insert($_POST);
                 redirect('home/signin');
@@ -29,7 +30,7 @@ class SignIn extends Controller
 
         $data['errors'] = $user->errors;
         $data['loginData'] = $_POST;
-        
+
         // show($data);
         $this->view('signin', $data);
     }
@@ -69,14 +70,12 @@ class SignIn extends Controller
                     } else if ($row->status == 'crew_member') {
                         redirect('employer/home');
                     }
-
                 } else {
                     $data['errors'] = "";
                     $user->errors = "Invalid Email or Password";
                     $data['errors'] = $user->errors;
                 }
             }
-
         } else {
             $data['errors'] = "";
             $user->errors = "Invalid Email or Password";

@@ -59,13 +59,13 @@
   background: #000;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 530px) {
   header {
     padding: 0 30px;
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 530px) {
   .hamburger {
     display: block;
   }

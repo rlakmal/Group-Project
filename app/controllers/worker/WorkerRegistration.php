@@ -5,12 +5,15 @@ class WorkerRegistration extends Controller
     public function index($a = '', $b = '', $c = '')
     {
         $user = new User;
+        $worker = new Worker;
 
         // // sign up validation
         if (isset($_POST['worker_register'])) {
+            show($_POST);
 
             //     if ($user->validate($_POST)) {
-
+            $temp_category = $_POST['category'];
+            $temp_gender = $_POST['gender'];
             unset($_POST['worker_register']);
             unset($_POST['category']);
             unset($_POST['gender']);
@@ -30,10 +33,27 @@ class WorkerRegistration extends Controller
             $hash = password_hash($password, PASSWORD_BCRYPT);
             $_POST['password'] = $hash;
 
-            // show($_POST);
+            //show($_POST);
 
             $user->insert($_POST);
-            // redirect('home/workerreg');
+            $_POST['category'] = $temp_category;
+            $_POST['gender'] = $temp_gender;
+            // unset($_POST['name']);
+            unset($_POST['nic']);
+            unset($_POST['address']);
+            // unset($_POST['city']);
+            unset($_POST['dob']);
+            unset($_POST['email']);
+            unset($_POST['password']);
+            unset($_POST['status']);
+
+            //$_POST['worker_id'] = $user->getLastInsertId();
+
+
+            //show($_POST);
+            $worker->insert($_POST);
+
+            redirect('home');
         }
         $this->view('home/workerRegistration');
     }

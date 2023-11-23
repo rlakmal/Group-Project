@@ -429,7 +429,7 @@ ul li .active .uil{
 
 /* Responsive Css  */
 
-@media (max-width: 980px) {
+@media (max-width: 530px) {
   .pb {
     left: 0;
     top: 2%;

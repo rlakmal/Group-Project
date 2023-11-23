@@ -12,10 +12,10 @@ class JobPost
 		'description',
 		'address',
 		'created',
-        'emp_id',
-        'personnel',
-        'budget',
-        'city',
+		'emp_id',
+		'personnel',
+		'budget',
+		'city',
+		'emp_name',
 	];
-
 }

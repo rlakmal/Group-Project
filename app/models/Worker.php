@@ -1,21 +1,18 @@
 <?php
 
 
-class JobPost
+class Worker
 {
 	use Model;
 
 	protected $table = 'worker';
 
 	protected $allowedCloumns = [
-		'jobTitle',
-		'description',
-		'address',
+		'category',
+		'gender',
+		'worker_id',
 		'created',
-        'emp_id',
-        'personnel',
-        'budget',
-        'city',
+		'name',
+		'city',
 	];
-
 }

@@ -2,7 +2,7 @@
 
 trait Database
 {
-    private function connect()
+    public function connect()
     {
 
         $string = "mysql:host=" . DBHOST . ";dbname=" . DBNAME;
@@ -18,7 +18,7 @@ trait Database
     {
 
         $con = $this->connect();
-        $stm = $con->prepare($quary); 
+        $stm = $con->prepare($quary);
 
         $check = $stm->execute($data);
 

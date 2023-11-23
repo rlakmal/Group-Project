@@ -4,73 +4,81 @@ class AdminCrew extends Controller
 {
     public function index($a = '', $b = '', $c = '')
     {
-        $username  = empty($_SESSION['USER']) ? 'User' : $_SESSION['USER']->email;
+        $username = isset($_SESSION['USER']) ? $_SESSION['USER']->email : 'User';
 
-        if ($username != 'User' && $_SESSION['USER']->status == 'admin') {
-
-
+        if ($username != 'User' && isset($_SESSION['USER']->status) && $_SESSION['USER']->status == 'admin') {
             $member = new CrewMember;
 
             if (isset($_POST['memberRegister'])) {
-
-                unset($_POST['memberRegister']);
-
-                $_POST['status'] = 'crew_member';
-                $_POST['active'] = 1;
-
-                $password = $_POST['password'];
-                $hash = password_hash($password, PASSWORD_BCRYPT);
-                $_POST['password'] = $hash;
-
-                // show($_POST);
-                $member->insert($_POST);
-                redirect('admin/admincrew');
+                $this->handleMemberRegistration($_POST, $member);
             }
 
             $result = $member->findAll('id');
-
             $data['data'] = $result;
-            if (!empty($data)) {
-                extract($data);
-                // show($data);
-            }
-            if (!empty($data)) {
 
-
-                foreach ($data as $item) {
-
-                    unset($item->password);
-                    unset($item->created);
-                    unset($item->status);
-                    //  show($item->password);
-                }
+            if (!empty($data['data'])) {
+                $this->unsetFields($data['data']);
+                $this->showData($data);
             }
 
             if (isset($_POST['member'])) {
-                unset($_POST['member']);
-                $id = $_POST['id'];
-
-                unset($_POST['id']);
-                $this->Updatedetails($member, $id, $_POST);
+                $this->handleMemberUpdate($member, $_POST);
             }
-            
+
             if (isset($_POST['active'])) {
-                unset($_POST['active']);
-                // show($_POST);
-                $member->delete($_POST['id'],'id');
-                redirect('admin/admincrew');
+                $this->handleMemberDeletion($member, $_POST);
             }
 
-            
             $this->view('admin/admincrew', $data);
         } else {
             redirect('home');
         }
     }
-    // update member data
-    private function Updatedetails($member, $use_id, $data)
+
+    private function handleMemberRegistration($postData, $member)
     {
-        $member->update($use_id, $data, 'id');
+        unset($postData['memberRegister']);
+        $postData['status'] = 'crew_member';
+        $postData['active'] = 1;
+        $password = $_POST['password'];
+        $hash = password_hash($password, PASSWORD_BCRYPT);
+        $postData['password'] = $hash;
+        $member->insert($postData);
+        redirect('admin/admincrew');
+    }
+
+    private function unsetFields(&$data)
+    {
+        foreach ($data as $item) {
+            unset($item->password);
+            unset($item->created);
+            unset($item->status);
+        }
+    }
+
+    private function showData($data)
+    {
+        extract($data);
+    }
+
+    private function handleMemberUpdate($member, $postData)
+    {
+        unset($postData['member']);
+        $id = $postData['id'];
+        unset($postData['id']);
+        $this->updateDetails($member, $id, $postData);
+    }
+
+    private function handleMemberDeletion($member, $postData)
+    {
+        unset($postData['active']);
+        $member->delete($postData['id'], 'id');
+        redirect('admin/admincrew');
+    }
+
+    private function updateDetails($member, $user_id, $data)
+    {
+        $member->update($user_id, $data, 'id');
         redirect('admin/admincrew');
     }
 }

@@ -17,13 +17,12 @@
     <div class="set-margin" id="set-marginid">
         <?php
         if (is_array($data)) {
+
             foreach ($data as $item) {
                 // show($item);
                 // තණකොළ කැපීමට සේවකයෙකු අවශ්‍යයි
-
                 date_default_timezone_set('Asia/Kolkata');
-
-                $date1 = new DateTime($item->created);
+                $date1 = new DateTime($item->job_created);
                 $date2 = new DateTime();
 
                 // Calculate the difference between the dates
@@ -55,9 +54,9 @@
                             <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
                         </div>
                         <div class="index">
-                            <div class="profile-name"><?php echo "Dasun" ?></div>
+                            <div class="profile-name"><?php echo $item->name ?></div>
                             <div class="profile-ratings"><?php echo $times_ago ?></div>
-                            <div class="profile-type"><?php echo $item->jobTitle ?></div>
+                            <div class="profile-type"><?php echo $item->title ?></div>
 
 
                             <div class="budget">Rs <?php echo $item->budget ?>/= per day</div>
