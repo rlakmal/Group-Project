@@ -18,6 +18,7 @@
         <?php
         if (is_array($data)) {
             foreach ($data as $item) {
+                // show($item);
 
                 // තණකොළ කැපීමට සේවකයෙකු අවශ්‍යයි
                 date_default_timezone_set('Asia/Kolkata');
@@ -48,10 +49,10 @@
                 <div class="post-container">
                     <div class="profile-container2">
                         <div class="picture">
-                            <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
+                            <img class="image" src="<?= ROOT ?>/assets/images/profileImages/<?php echo $_SESSION['USER']->profile_image  ?>" alt="placeholder">
                         </div>
                         <div class="index">
-                            <div class="profile-name"><?php echo "Dasun" ?></div>
+                            <div class="profile-name"><?php echo $item->emp_name ?></div>
                             <div class="profile-ratings"><?php echo $times_ago ?></div>
                             <div class="profile-type"><?php echo $item->jobTitle ?></div>
                             <div class="budget">Rs <?php echo $item->budget ?> /= per day</div>
@@ -71,7 +72,7 @@
         }
         ?>
     </div>
-    
+
     <div class="popup-view">
         <form method="POST">
             <h2>Edit your Post</h2>
@@ -86,7 +87,7 @@
             <h4>Description : </h4>
             <input name="description" type="text" value="" required placeholder="Enter your description">
 
-            <input name="id" type="hidden" value="" >
+            <input name="id" type="hidden" value="">
 
             <div class="btns">
                 <button type="button" class="cancelR-btn" onclick="closeEdit()">Cancel</button>

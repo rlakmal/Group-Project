@@ -8,7 +8,6 @@
 
 <body>
     <?php include 'employernav.php' ?>
-    <?php include 'requestpopup.php' ?>
     <style>
         .main-container4 {
             margin-left: 200px;
@@ -28,15 +27,37 @@
             position: absolute;
             border-radius: 20px;
         }
+
+        .form-upload {
+            margin-top: -30px;
+            margin-left: 250px;
+            cursor: pointer;
+            width: 110px;
+            height: 24px;
+            background-color: #f16a2d;
+            color: white;
+            border-radius: 20px;
+            font-size: 15px;
+            align-items: center;
+            text-align: center;
+        }
     </style>
 
     <div class="main-container4">
         <div class="profile-container3">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
 
                 <button type="submit" class="close-button" value="Edit" name="edit">Done</button>
-                <div class="picture">
-                    <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
+                <div class="form-drag-area">
+                    <div class="picture">
+                        <img class="image" src="<?= ROOT ?>/assets/images/profileImages/<?php echo $data['newData']['profile_image']  ?>" alt="placeholder" id="profile_image_placeholder">
+
+                    </div>
+                    <div class="form-upload">
+                        <input type="file" id="profile_image" style="display: none;" name="profile_image">
+                        Choose Image
+
+                    </div>
                 </div>
                 <div class="picture">
                     <img class="rates" src="<?= ROOT ?>/assets/images/employer/rates.png" alt="">
@@ -67,9 +88,13 @@
                     <input type="text" name="dob" value="<?php echo $data['newData']['dob']; ?>" class="edit-gen" placeholder="Empty Date of Birth">
 
                 </div>
+
             </form>
 
+
         </div>
+        <script src="<?= ROOT ?>/assets/js/employer/imageUpload.js"></script>
 </body>
+
 
 </html>

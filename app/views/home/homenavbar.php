@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="<?= ROOT ?>/assets/css/home/homenav.css">
 </head>
+
 <body>
     <div class="homenavbar">
         <header>
@@ -22,7 +24,7 @@
                     <li>
                         <a href="<?= ROOT ?>/home/workerreg" class="active">Register As Worker</a>
                     </li>
-                   
+
                 </ul>
             </nav>
             <label for="nav_check" class="hamburger"></label>
@@ -30,4 +32,5 @@
     </div>
     <script src="<?= ROOT ?>/assets/js/home/homenavbar.js"></script>
 </body>
+
 </html>

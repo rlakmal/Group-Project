@@ -17,13 +17,12 @@ class User
 		'password',
 		'status',
 		'is_active',
+		'profile_image',
 	];
 
 	public function validate($data)
 	{
 		$this->errors = [];
-
-		// show($data);
 
 		// is empty name 
 		if (empty($data['name'])) {
@@ -32,9 +31,9 @@ class User
 			$this->errors['fullname'] = "Full Name is Required";
 		}
 		// name validation
-		if (!preg_match("/^[a-zA-z]*$/", $data['name'])) {
+		if (!preg_match("/^[a-zA-Z ]*$/", $data['name'])) {
 			$this->errors['flag'] = true;
-			$this->errors['fullname'] = array('nameError' => "Use only letters", "name" => "Full Name is not valid");
+			$this->errors['fullname'] = array('nameError' => "Use only letters and spaces", "name" => "Full Name is not valid");
 			// $this->errors[] = ;
 		}
 
@@ -113,4 +112,10 @@ class User
 			return false;
 		}
 	}
+	// public function getLastInsertId()
+	// {
+	// 	$con = $this->connect();
+	// 	return $con->lastInsertId();
+
+	// }
 }

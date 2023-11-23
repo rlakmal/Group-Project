@@ -12,13 +12,13 @@ class Myjob extends Controller
             try {
 
                 $jobPost = new JobPost;
-
                 $emp_id = $_SESSION['USER']->id;
                 $arr['emp_id'] = $emp_id;
 
                 // view employer posted jobs            
                 $result = $jobPost->where($arr, 'created');
                 $data['data'] = $result;
+
 
                 // job delete
                 if (isset($_POST['jobDelete'])) {
@@ -29,7 +29,6 @@ class Myjob extends Controller
 
                 // job update 
                 if (isset($_POST['editPost'])) {
-
                     unset($_POST['editPost']);
                     $this->jobUpdate($_POST, $jobPost);
                 }

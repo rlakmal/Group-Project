@@ -14,17 +14,6 @@
   min-height: 60vh;
   padding: 1.5%;
 }
-
-@media screen and (max-width: 600px) {
-  .two-content-div {
-    display: flex;
-    column-gap: normal;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 20px;
-  }
-}
-
 .content-div-img {
   display: flex;
   align-items: center;
@@ -88,21 +77,6 @@
   font-size: 153px;
   color: #f16a2d;
   font-weight: bold;
-}
-
-/* .logo-name{
-  background-color: #000000;
-  width: 100px;
-  height: 100px;
-} */
-
-@media screen and (max-width: 500px) {
-  .home-first-content .title {
-    font-size: 90px;
-  }
-  .home-first-content span {
-    font-size: 40px;
-  }
 }
 
 .home-first-content span {
@@ -304,14 +278,6 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
-
-@media screen and (max-width: 750px) {
-  .two-content-div-form form input.input-with-button {
-    width: 60%;
-    margin-right: 10px;
-  }
-}
-
 form input,
 form select {
   height: 30px;
@@ -417,14 +383,6 @@ form input[type="submit"] {
   padding: 1.5%;
   gap: 30px;
 }
-
-@media screen and (max-width: 600px) {
-  .error-div img {
-    width: 100%;
-    height: auto;
-  }
-}
-
 .error-div button {
   font-size: 26px;
   width: 200px;
@@ -443,5 +401,57 @@ form input[type="submit"] {
   position: fixed;
   top: 0;
   left: 0;
-    z-index: 10;
+  z-index: 10;
+}
+/* ... Your existing styles ... */
+
+@media screen and (max-width: 530px) {
+  .maincontainer {
+    margin-top: 30px;
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+  }
+
+  .two-content-div,
+  .single-content-div,
+  .colomn-content-div {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .two-content-div-form {
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+  .two-content-div-form .subtitle {
+    font-size: 35px;
+  }
+
+  .home-first-content {
+    max-width: 100%;
+  }
+
+  .home-first-content .title {
+    font-size: 80px;
+  }
+
+  .home-first-content .first_letter {
+    font-size: 90px;
+  }
+
+  .home-first-content span {
+    font-size: 25px;
+  }
+
+  .home-first-content .button-reg,
+  .home-first-content .button-hire {
+    font-size: 14px;
+    width: 150px;
+    height: 40px;
+  }
+  .two-content-div .title {
+    font-size: 30px;
+  }
 }

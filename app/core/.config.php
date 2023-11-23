@@ -13,6 +13,7 @@ if ($_SERVER['SERVER_NAME'] == 'localhost') {
     define('DBDRIVER', '');
 
     define('ROOT', 'http://localhost/Group-project/public');
+    define('PUBROOT', dirname(dirname(dirname(__FILE__))) . '/public');
 } else {
 
     // database configaration

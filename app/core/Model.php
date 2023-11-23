@@ -11,6 +11,8 @@ trait Model
     protected $offset       = 0;
     protected $order_type   = 'DESC';
     public $errors       = [];
+    
+    
     public function findAll($id = 'id')
     {
 
@@ -52,9 +54,7 @@ trait Model
     {
         $keys = array_keys($data);
         $quary = "INSERT INTO $this->table (" . implode(",", $keys) . ") VALUES (:" . implode(",:", $keys) . ") ";
-
         // echo $quary;
-
         // run the quary stage
         $this->quary($quary, $data);
         return false;
