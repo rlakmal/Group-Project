@@ -31,7 +31,7 @@
                     <i class="bx bxs-chat icon"></i>
                 </a>
                 <!-- <a href="<?= ROOT ?>/employer/message"><img src="<?= ROOT ?>/assets/images/employer/msg.png" alt="Message"></a> -->
-                <a href="#">
+                <a href="<?= ROOT ?>/employer/notifications">
                     <i class="bx bxs-bell icon"></i>
                     <!-- <img src="<?= ROOT ?>/assets/images/employer/belll.png" alt="notification"> -->
                 </a>

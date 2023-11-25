@@ -16,7 +16,7 @@
                         <a href="<?= ROOT ?>/home" class="active">Home</a>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <a href="<?= ROOT ?>/about">About</a>
                     </li>
                     <li>
                         <a href="<?= ROOT ?>/home/signin" class="active">Login</a>
