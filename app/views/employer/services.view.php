@@ -18,7 +18,7 @@
         <?php
         if (is_array($data)) {
             foreach ($data as $item) {
-                // show($item);
+
 
         ?>
                 <div class="main-container2">
@@ -34,7 +34,8 @@
                             <div class="location"><?php echo $item->city ?></div>
 
                         </div>
-                        <a href="<?= ROOT ?>/employer/workerprof"><button class="view-profile-button">View Profile</button></a>
+                        <a href="<?= ROOT ?>/employer/workerprof?id=<?php echo $item->id ?>"><button class="view-profile-button">View Profile</button></a>
+
                     </div>
                 </div>
         <?php

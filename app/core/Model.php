@@ -7,12 +7,12 @@ trait Model
 
     use Database;
 
-    protected $limit        = 10;
+    protected $limit        = 100;
     protected $offset       = 0;
     protected $order_type   = 'DESC';
     public $errors       = [];
-    
-    
+
+
     public function findAll($id = 'id')
     {
 

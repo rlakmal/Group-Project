@@ -51,7 +51,7 @@
                 <div class="post-container">
                     <div class="profile-container2">
                         <div class="picture">
-                            <img class="image" src="<?= ROOT ?>/assets/images/employer/profile.jpg" alt="">
+                            <img class="image" src="<?= ROOT ?>/assets/images/profileImages/<?php echo $item->profile_image  ?>" alt="placeholder">
                         </div>
                         <div class="index">
                             <div class="profile-name"><?php echo $item->name ?></div>
