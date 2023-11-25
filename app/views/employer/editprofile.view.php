@@ -63,7 +63,7 @@
                     <img class="rates" src="<?= ROOT ?>/assets/images/employer/rates.png" alt="">
                 </div>
 
-                <div class="index">
+                <div class="index_edit">
 
                     <h3>
                         Full Name

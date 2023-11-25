@@ -32,8 +32,9 @@ body {
 }
 
 .picture .image {
-  max-width: 45px;
-  border-radius: 10%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
 }
 
 .profile-name {
@@ -97,8 +98,8 @@ body {
 }
 
 .index {
-  margin-top: -50px;
-  margin-left: 60px;
+  margin-top: -58px;
+  margin-left: 72px;
 }
 
 .post-container {

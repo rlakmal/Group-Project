@@ -10,12 +10,12 @@ class AdminCrew extends Controller
             $member = new CrewMember;
 
             if (isset($_POST['memberRegister'])) {
+                show($_POST);
                 $this->handleMemberRegistration($_POST, $member);
             }
 
             $result = $member->findAll('id');
             $data['data'] = $result;
-
             if (!empty($data['data'])) {
                 $this->unsetFields($data['data']);
                 $this->showData($data);
