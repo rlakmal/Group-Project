@@ -12,6 +12,7 @@ route('home/workerregnext', 'worker/WorkerRegNext@index');
 route('home/workerregthree', 'worker/WorkerRegThree@index');
 route('home/workerregfour', 'worker/WorkerRegFour@Index');
 route('home/workerregfive', 'worker/WorkerRegFive@Index');
+route('about', 'about/About@Index');
 
 /*---------------------------------------------------------------------
     employee routes
@@ -27,6 +28,8 @@ route('employer/postedjobsrequest', 'employer/PostedjobsRequest@index');
 route('employer/myworkerreq', 'employer/RequestByME@index');
 route('employer/profile', 'employer/EmployerProfile@index');
 route('employer/editprofile', 'employer/EditProfile@index');
+route('employer/notifications', 'employer/EmpNotification@index');
+
 
 
 /*---------------------------------------------------------------------
@@ -43,6 +46,7 @@ route('worker/recievedjobs', 'worker/RecievedJob@index');
 route('worker/acceptedjobs', 'worker/AcceptedJobs@index');
 route('worker/completedjobs', 'worker/CompletedJobs@index');
 route('worker/workerprofile', 'worker/WorkerProfile@index');
+route('worker/notifications', 'worker/WorkerNotification@index');
 
 /*---------------------------------------------------------------------
     admin routes

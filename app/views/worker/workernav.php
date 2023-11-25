@@ -23,7 +23,7 @@
             </nav>
             <div class="icons">
                 <a href="<?= ROOT ?>/worker/messages"><img src="<?= ROOT ?>/assets/images/employer/msg.png" alt="Message"></a>
-                <a href="#"><img src="<?= ROOT ?>/assets/images/employer/belll.png" alt="notification"></a>
+                <a href="<?= ROOT ?>/worker/notifications"><img src="<?= ROOT ?>/assets/images/employer/belll.png" alt="notification"></a>
                 <div class="profile-dropdown" id="profile-dropdown">
                     <a href="#"><img class="profile-icon" src="<?= ROOT ?>/assets/images/employer/prr.png" alt="Profile"></a>
                     <div class="profile-menu" id="profile-menu">
