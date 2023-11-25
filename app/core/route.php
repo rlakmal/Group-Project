@@ -53,3 +53,13 @@ route('admin/workers', 'admin/WorkersList@index');
 route('admin/employers', 'admin/EmployersList@index');
 route('admin/admincrew', 'admin/AdminCrew@index');
 route('admin/adnotification', 'admin/AdNotification@index');
+route('admin/adnotification2', 'admin/AdNotification2@index');
+route('admin/adreports', 'admin/AdReports@index');
+
+/*---------------------------------------------------------------------
+    worker routes
+--------------------------------------------------------------------- */
+
+route('member/home', 'member/AdHome@index');
+route('member/workers', 'member/WorkersList@index');
+route('member/tickets', 'member/Ticket@index');

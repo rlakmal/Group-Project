@@ -25,34 +25,34 @@
                 </a>
                 <span class="tooltip">Users</span>
             </li>
-            <li>
-                <a href="<?= ROOT ?>/admin/admincrew">
-                    <i class="bx bxs-group"></i>
-                    <span class="link_name">Admin Crew</span>
-                </a>
-                <span class="tooltip">Admin Crew</span>
-            </li>
-            <li>
-                <a href="<?= ROOT ?>/admin/adnotification2">
-                    <i class="bx bxs-bell-plus"></i>
-                    <span class="link_name">Notifications</span>
-                </a>
-                <span class="tooltip">Notifications</span>
-            </li>
-            <li>
-                <a href="<?= ROOT ?>/admin/adreports">
-                    <i class="bx bxs-report"></i>
-                    <span class="link_name">Reports</span>
-                </a>
-                <span class="tooltip">Reports</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bx bxs-user-circle"></i>
-                    <span class="link_name">Profile</span>
-                </a>
-                <span class="tooltip">Profile</span>
-            </li>
+<!--            <li>-->
+<!--                <a href="--><?php //= ROOT ?><!--/admin/admincrew">-->
+<!--                    <i class="bx bxs-group"></i>-->
+<!--                    <span class="link_name">Admin Crew</span>-->
+<!--                </a>-->
+<!--                <span class="tooltip">Admin Crew</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="--><?php //= ROOT ?><!--/admin/adnotification2">-->
+<!--                    <i class="bx bxs-bell-plus"></i>-->
+<!--                    <span class="link_name">Notifications</span>-->
+<!--                </a>-->
+<!--                <span class="tooltip">Notifications</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="--><?php //= ROOT ?><!--/admin/adreports">-->
+<!--                    <i class="bx bxs-report"></i>-->
+<!--                    <span class="link_name">Reports</span>-->
+<!--                </a>-->
+<!--                <span class="tooltip">Reports</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="#">-->
+<!--                    <i class="bx bxs-user-circle"></i>-->
+<!--                    <span class="link_name">Profile</span>-->
+<!--                </a>-->
+<!--                <span class="tooltip">Profile</span>-->
+<!--            </li>-->
 
             <li class="profile">
                 <div class="profile_details">
