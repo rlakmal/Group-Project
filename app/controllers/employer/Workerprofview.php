@@ -17,8 +17,10 @@ class Workerprofview extends Controller
             if (isset($_POST['reqWorker'])) {
                 unset($_POST['reqWorker']);
                 $emp_id = $_SESSION['USER']->id;
+                $emp_name = $_SESSION['USER']->name;
                 $wkr_id = $id;
                 $_POST['emp_id'] = $emp_id;
+                $_POST['emp_name'] = $emp_name;
                 $_POST['worker_id'] = $wkr_id;
                 $request->insert($_POST);
             }
