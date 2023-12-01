@@ -12,6 +12,7 @@ class EmployerReqWorker
         'city',
         'description',
         'worker_id',
+        'worker_name',
 
     ];
 }
